@@ -1,0 +1,11 @@
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\bin\Debug\CapaVista_SGP.dll
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\bin\Debug\CapaVista_SGP.pdb
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.csprojAssemblyReference.cache
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.csproj.CoreCompileInputs.cache
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.dll
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.pdb
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\bin\Debug\CapaControlador_SGP.dll
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\bin\Debug\CapaControlador_SGP.pdb
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.csproj.CopyComplete
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmPrincipal.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.csproj.GenerateResource.cache
