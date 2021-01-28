@@ -7,3 +7,12 @@ D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\C
 D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaModelo_SGP.dll
 D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaModelo_SGP.pdb
 D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.csproj.CopyComplete
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaControlador_SGP.dll
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaControlador_SGP.pdb
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaModelo_SGP.dll
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaModelo_SGP.pdb
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.csprojAssemblyReference.cache
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.csproj.CoreCompileInputs.cache
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.csproj.CopyComplete
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.dll
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.pdb

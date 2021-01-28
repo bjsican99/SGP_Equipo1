@@ -4,3 +4,9 @@ D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaMo
 D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.csproj.CoreCompileInputs.cache
 D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.dll
 D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.pdb
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaModelo_SGP\bin\Debug\CapaModelo_SGP.dll
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaModelo_SGP\bin\Debug\CapaModelo_SGP.pdb
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.csprojAssemblyReference.cache
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.csproj.CoreCompileInputs.cache
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.dll
+C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.pdb
