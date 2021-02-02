@@ -10,3 +10,15 @@ D:\Documentos\Proyectos-Software\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Eje
 D:\Documentos\Proyectos-Software\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CopyComplete
 D:\Documentos\Proyectos-Software\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.exe
 D:\Documentos\Proyectos-Software\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.pdb
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\bin\Debug\Ejecutable.exe.config
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\bin\Debug\Ejecutable.exe
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\bin\Debug\Ejecutable.pdb
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\bin\Debug\CapaVista_SGP.dll
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\bin\Debug\CapaVista_SGP.pdb
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csprojAssemblyReference.cache
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.Properties.Resources.resources
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.GenerateResource.cache
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CoreCompileInputs.cache
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CopyComplete
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.exe
+C:\Users\Brian\Desktop\SGP_Equipo1\Ejecutable\Ejecutable\obj\Debug\Ejecutable.pdb
