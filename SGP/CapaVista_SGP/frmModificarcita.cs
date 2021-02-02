@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaVista_SGP
 {
-    public partial class frmLogin : Form
+    public partial class frmModificarcita : Form
     {
-        public frmLogin()
+        public frmModificarcita()
         {
             InitializeComponent();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
