@@ -29,3 +29,12 @@ C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frm
 C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmMenor.resources
 C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmModificarcita.resources
 C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmVerificar.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmCita.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmImprimir.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmMenor.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmModiCita.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmModificarcita.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmNuevaCita.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmPrimerpass.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmVerificar.resources
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.Properties.Resources.resources

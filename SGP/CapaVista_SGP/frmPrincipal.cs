@@ -73,7 +73,7 @@ namespace CapaVista_SGP
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+            //statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +107,25 @@ namespace CapaVista_SGP
         private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void procesoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void citasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCita Cita = new frmCita();
+            Cita.MdiParent = this;
+            Cita.Show();
+        }
+
+        private void emisionPasaporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrimerpass primerpass = new frmPrimerpass();
+            primerpass.MdiParent = this;
+            primerpass.Show();
         }
     }
 }
