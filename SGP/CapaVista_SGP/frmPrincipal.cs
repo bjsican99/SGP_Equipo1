@@ -123,9 +123,9 @@ namespace CapaVista_SGP
 
         private void emisionPasaporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPrimerpass primerpass = new frmPrimerpass();
-            primerpass.MdiParent = this;
-            primerpass.Show();
+            frmVerificacionDatos verificacionDatos = new frmVerificacionDatos();
+            verificacionDatos.MdiParent = this;
+            verificacionDatos.Show();
         }
     }
 }

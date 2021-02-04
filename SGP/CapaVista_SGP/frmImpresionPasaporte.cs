@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaVista_SGP
 {
-    public partial class frmModificarcita : Form
+    public partial class frmImpresionPasaporte : Form
     {
-        public frmModificarcita()
+        public frmImpresionPasaporte()
         {
             InitializeComponent();
         }

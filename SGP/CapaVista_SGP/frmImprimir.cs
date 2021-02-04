@@ -16,5 +16,10 @@ namespace CapaVista_SGP
         {
             InitializeComponent();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
