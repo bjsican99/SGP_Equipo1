@@ -34,6 +34,12 @@ namespace CapaVista_SGP
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.centrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoPasaporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.citasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emisionPasaporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,12 +51,6 @@ namespace CapaVista_SGP
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.procesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.citasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.centrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoPasaporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.emisionPasaporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,7 @@ namespace CapaVista_SGP
             // 
             this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
+            this.fileMenu.ForeColor = System.Drawing.Color.White;
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.fileMenu.Name = "fileMenu";
             this.fileMenu.Size = new System.Drawing.Size(60, 20);
@@ -89,10 +90,58 @@ namespace CapaVista_SGP
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
+            // mantenimientosToolStripMenuItem
+            // 
+            this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.centrosToolStripMenuItem,
+            this.tipoPasaporteToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
+            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
+            // 
+            // centrosToolStripMenuItem
+            // 
+            this.centrosToolStripMenuItem.Name = "centrosToolStripMenuItem";
+            this.centrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.centrosToolStripMenuItem.Text = "Centros";
+            // 
+            // tipoPasaporteToolStripMenuItem
+            // 
+            this.tipoPasaporteToolStripMenuItem.Name = "tipoPasaporteToolStripMenuItem";
+            this.tipoPasaporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoPasaporteToolStripMenuItem.Text = "Tipo Pasaporte";
+            // 
+            // procesoToolStripMenuItem
+            // 
+            this.procesoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.citasToolStripMenuItem,
+            this.emisionPasaporteToolStripMenuItem});
+            this.procesoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.procesoToolStripMenuItem.Name = "procesoToolStripMenuItem";
+            this.procesoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.procesoToolStripMenuItem.Text = "Proceso";
+            this.procesoToolStripMenuItem.Click += new System.EventHandler(this.procesoToolStripMenuItem_Click);
+            // 
+            // citasToolStripMenuItem
+            // 
+            this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.citasToolStripMenuItem.Text = "Citas";
+            this.citasToolStripMenuItem.Click += new System.EventHandler(this.citasToolStripMenuItem_Click);
+            // 
+            // emisionPasaporteToolStripMenuItem
+            // 
+            this.emisionPasaporteToolStripMenuItem.Name = "emisionPasaporteToolStripMenuItem";
+            this.emisionPasaporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.emisionPasaporteToolStripMenuItem.Text = "Emision Pasaporte";
+            this.emisionPasaporteToolStripMenuItem.Click += new System.EventHandler(this.emisionPasaporteToolStripMenuItem_Click);
+            // 
             // toolsMenu
             // 
             this.toolsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem});
+            this.toolsMenu.ForeColor = System.Drawing.Color.White;
             this.toolsMenu.Name = "toolsMenu";
             this.toolsMenu.Size = new System.Drawing.Size(90, 20);
             this.toolsMenu.Text = "&Herramientas";
@@ -111,6 +160,7 @@ namespace CapaVista_SGP
             this.searchToolStripMenuItem,
             this.toolStripSeparator8,
             this.aboutToolStripMenuItem});
+            this.helpMenu.ForeColor = System.Drawing.Color.White;
             this.helpMenu.Name = "helpMenu";
             this.helpMenu.Size = new System.Drawing.Size(53, 20);
             this.helpMenu.Text = "Ay&uda";
@@ -166,51 +216,6 @@ namespace CapaVista_SGP
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
-            // 
-            // procesoToolStripMenuItem
-            // 
-            this.procesoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.citasToolStripMenuItem,
-            this.emisionPasaporteToolStripMenuItem});
-            this.procesoToolStripMenuItem.Name = "procesoToolStripMenuItem";
-            this.procesoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.procesoToolStripMenuItem.Text = "Proceso";
-            this.procesoToolStripMenuItem.Click += new System.EventHandler(this.procesoToolStripMenuItem_Click);
-            // 
-            // citasToolStripMenuItem
-            // 
-            this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
-            this.citasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.citasToolStripMenuItem.Text = "Citas";
-            this.citasToolStripMenuItem.Click += new System.EventHandler(this.citasToolStripMenuItem_Click);
-            // 
-            // mantenimientosToolStripMenuItem
-            // 
-            this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.centrosToolStripMenuItem,
-            this.tipoPasaporteToolStripMenuItem});
-            this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
-            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
-            // 
-            // centrosToolStripMenuItem
-            // 
-            this.centrosToolStripMenuItem.Name = "centrosToolStripMenuItem";
-            this.centrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.centrosToolStripMenuItem.Text = "Centros";
-            // 
-            // tipoPasaporteToolStripMenuItem
-            // 
-            this.tipoPasaporteToolStripMenuItem.Name = "tipoPasaporteToolStripMenuItem";
-            this.tipoPasaporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tipoPasaporteToolStripMenuItem.Text = "Tipo Pasaporte";
-            // 
-            // emisionPasaporteToolStripMenuItem
-            // 
-            this.emisionPasaporteToolStripMenuItem.Name = "emisionPasaporteToolStripMenuItem";
-            this.emisionPasaporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.emisionPasaporteToolStripMenuItem.Text = "Emision Pasaporte";
-            this.emisionPasaporteToolStripMenuItem.Click += new System.EventHandler(this.emisionPasaporteToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
