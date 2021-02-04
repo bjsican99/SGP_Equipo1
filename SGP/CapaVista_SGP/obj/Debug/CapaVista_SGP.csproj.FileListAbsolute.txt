@@ -58,3 +58,4 @@ C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\Cap
 C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.pdb
 C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmFechaCita.resources
 C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmVerificacionDatos.resources
+C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.frmImpresionPasaporte.resources

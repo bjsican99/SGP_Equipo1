@@ -16,5 +16,14 @@ namespace CapaVista_SGP
         {
             InitializeComponent();
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void frmImpresionPasaporte_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

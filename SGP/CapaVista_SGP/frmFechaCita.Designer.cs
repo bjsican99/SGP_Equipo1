@@ -158,6 +158,7 @@
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmFechaCita";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFechaCita";
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
