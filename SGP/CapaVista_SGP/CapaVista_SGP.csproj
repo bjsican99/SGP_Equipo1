@@ -117,6 +117,9 @@
     <EmbeddedResource Include="frmCita.resx">
       <DependentUpon>frmCita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmImpresionPasaporte.resx">
+      <DependentUpon>frmImpresionPasaporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmImprimir.resx">
       <DependentUpon>frmImprimir.cs</DependentUpon>
     </EmbeddedResource>
