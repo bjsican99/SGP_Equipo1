@@ -1,4 +1,5 @@
-﻿using CapaVistaSeguridad;
+﻿using CapaVista_SGP.Mantenimientos;
+using CapaVistaSeguridad;
 using CapaVistaSeguridad.Formularios;
 using CapaVistaSeguridad.Formularios.Mantenimientos;
 using System;
@@ -276,6 +277,26 @@ namespace CapaVista_SGP
             {
                 txtusuario.Text = frm.usuario();
             }
+        }
+
+        private void centrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("3307", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso a Mantenimiento Linea De Productos", 5);    
+                frmMantenimientoCentro mantenimientoCentro = new frmMantenimientoCentro(txtusuario.Text);
+                mantenimientoCentro.MdiParent = this;
+                mantenimientoCentro.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ingresar a Mantenimiento Linea De Productos", 3307);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+
+            
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaControlador_SGP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace CapaVista_SGP
 {
     public partial class frmVerificacionDatos : Form
     {
+        clsControladorPasaporte controlador = new clsControladorPasaporte();
         public frmVerificacionDatos()
         {
             InitializeComponent();
@@ -27,6 +29,16 @@ namespace CapaVista_SGP
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            consultacui();
+        }
+
+        public void consultacui()
+        {
+           
         }
     }
 }
