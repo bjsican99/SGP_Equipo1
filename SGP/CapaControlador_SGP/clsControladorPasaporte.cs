@@ -12,6 +12,7 @@ namespace CapaControlador_SGP
     public class clsControladorPasaporte
     {
         clsModeloPasaporte Modelo = new clsModeloPasaporte();
+        clsVariableGlobal glo = new clsVariableGlobal();
         public DataTable funcObtenerCamposCombobox(string Campo1, string Campo2, string Tabla, string Estado)
         {
             string Comando = string.Format("SELECT " + Campo1 + " ," + Campo2 + " FROM " + Tabla + " WHERE " + Estado + "= 1;");
@@ -35,16 +36,25 @@ namespace CapaControlador_SGP
             string Consulta = "UPDATE  control_producto SET resultado_control_producto = 'Finalizado', estado_control_producto = 0 where pk_id_control_producto = " + Codigo + ";";
             return Modelo.funcModificar(Consulta);
         }
-        public OdbcDataReader funcConsultaDetalles(string Tabla, string CodPedido)
+        public OdbcDataReader funcConsultaDetallesCUI(string Tabla, string CodPedido)
         {
-            string Consulta = "SELECT * FROM " + Tabla + " Where fk_id_pedido_encabezado = " + CodPedido + ";";
+            string Consulta = "SELECT * FROM " + Tabla + " Where pk_cui = " + CodPedido + ";";
             return Modelo.funcConsulta(Consulta);
         }
-
-        public DataTable funcObtenerCUI(string Campo1, string Campo2, string Tabla, string Estado)
+        public OdbcDataReader funcConsultaDetallesBoleto(string Tabla, string CodPedido)
         {
-            string Comando = string.Format("SELECT * FROM" + Tabla + " WHERE " + Campo1 + " =  or " + Campo1 + " = 4 or " + Campo1 + " = 5 ;");
+            string Consulta = "SELECT * FROM " + Tabla + " Where pk_numero_boleto = " + CodPedido + ";";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public DataTable funcObtenerCamposComboboxPas(string Campo1, string Campo2, string Tabla, string Estado)
+        {
+            string Comando = string.Format("SELECT " + Campo1 + " ," + Campo2 + " FROM " + Tabla + " WHERE " + Estado + "= 1;");
             return Modelo.funcObtenerCamposCombobox(Comando);
+        }
+        public OdbcDataReader funcInsertarPasaporte()
+        {
+            string Consulta = "INSERT INTO tbl_pasaporte (pk_id_pasaporte, fk_id_tipo_pasaporte, fk_id_usuario_pasaporte, fecha_emision, fecha_vencimiento, numero_libreta, estado) VALUES("+glo.pk_cuig+", 1 , "+glo.pk_cuig+","+ glo.fecha_emisiong.ToString() +","+ glo.fecha_expiraciong.ToString() +","+glo.nolibretag+",1); ";
+            return Modelo.funcInsertar(Consulta);
         }
     }
 }
