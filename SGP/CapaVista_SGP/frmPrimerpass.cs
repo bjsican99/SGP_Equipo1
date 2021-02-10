@@ -69,15 +69,29 @@ namespace CapaVista_SGP
             glo.tipog = cmbtipo.Text;
             glo.autoridadg = txtautoridad.Text;
             glo.nolibretag = txtlibreta.Text;
+            glo.urlg = txtURL.Text;
         }
         private void guardarpasaportedb()
         {
             controlador.funcInsertarPasaporte();
         }
+        private void actualizarpasaportedb()
+        {
+            controlador.funcActualizarPasaporte_perfil();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             guardarglobal();
-            guardarpasaportedb();
+
+            if (rbtNuevo.Checked == true)
+            {
+                guardarpasaportedb();
+            }
+            if (rbtRenovacion.Checked == true)
+            {
+                actualizarpasaportedb();
+            }
+
 
             frmImpresionPasaporte impresionPasaporte = new frmImpresionPasaporte();
             impresionPasaporte.MdiParent = this.MdiParent;
@@ -120,6 +134,43 @@ namespace CapaVista_SGP
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtfechafinal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+  
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.png; *.bmp)|*.jpg; *.jpeg; *.png; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                pictureBox1.Image = new Bitmap(open.FileName);
+                // image file path  
+                txtURL.Text = open.FileName;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                pictureBox1.Image.Dispose();
+                pictureBox1.Image = null;
+                txtURL.Text = "";
+            }
         }
     }
 }

@@ -26,11 +26,17 @@ namespace CapaControlador_SGP
         static string fecha_expiracion;
         static string autoridad;
         static string nolibreta;
+        static string URL;
 
         public string tipog
         {
             get { return tipo; }
             set { tipo = value; }
+        }
+        public string urlg
+        {
+            get { return URL; }
+            set { URL = value; }
         }
         public string fecha_emisiong
         {
