@@ -1,2 +1,0 @@
-# Navegador
-Objeto Común Navegador

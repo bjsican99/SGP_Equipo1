@@ -31,20 +31,20 @@ namespace CapaVista_SGP
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImpresionPasaporte));
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txttipo = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.txtPasaporte = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtNacionalidad = new System.Windows.Forms.TextBox();
+            this.txtNacimiento = new System.Windows.Forms.TextBox();
+            this.txtgenero = new System.Windows.Forms.TextBox();
+            this.txtnaci = new System.Windows.Forms.TextBox();
+            this.txtCui = new System.Windows.Forms.TextBox();
+            this.txtEmision = new System.Windows.Forms.TextBox();
+            this.txtVencimiento = new System.Windows.Forms.TextBox();
+            this.txtAutoridad = new System.Windows.Forms.TextBox();
+            this.txtLibreta = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -62,104 +62,105 @@ namespace CapaVista_SGP
             this.button1.Text = "IMPRIMIR";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txttipo
             // 
-            this.textBox1.Location = new System.Drawing.Point(306, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(44, 20);
-            this.textBox1.TabIndex = 1;
+            this.txttipo.Location = new System.Drawing.Point(306, 40);
+            this.txttipo.Name = "txttipo";
+            this.txttipo.Size = new System.Drawing.Size(44, 20);
+            this.txttipo.TabIndex = 1;
             // 
-            // textBox2
+            // txtPais
             // 
-            this.textBox2.Location = new System.Drawing.Point(455, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(44, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtPais.Location = new System.Drawing.Point(455, 39);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(44, 20);
+            this.txtPais.TabIndex = 2;
+            this.txtPais.Text = "GT";
             // 
-            // textBox3
+            // txtPasaporte
             // 
-            this.textBox3.Location = new System.Drawing.Point(580, 38);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(208, 20);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtPasaporte.Location = new System.Drawing.Point(580, 38);
+            this.txtPasaporte.Name = "txtPasaporte";
+            this.txtPasaporte.Size = new System.Drawing.Size(208, 20);
+            this.txtPasaporte.TabIndex = 3;
+            this.txtPasaporte.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // txtApellido
             // 
-            this.textBox4.Location = new System.Drawing.Point(291, 69);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(208, 20);
-            this.textBox4.TabIndex = 4;
+            this.txtApellido.Location = new System.Drawing.Point(291, 69);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(208, 20);
+            this.txtApellido.TabIndex = 4;
             // 
-            // textBox5
+            // txtNombre
             // 
-            this.textBox5.Location = new System.Drawing.Point(291, 98);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(208, 20);
-            this.textBox5.TabIndex = 5;
+            this.txtNombre.Location = new System.Drawing.Point(291, 98);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(208, 20);
+            this.txtNombre.TabIndex = 5;
             // 
-            // textBox6
+            // txtNacionalidad
             // 
-            this.textBox6.Location = new System.Drawing.Point(291, 127);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(208, 20);
-            this.textBox6.TabIndex = 6;
+            this.txtNacionalidad.Location = new System.Drawing.Point(291, 127);
+            this.txtNacionalidad.Name = "txtNacionalidad";
+            this.txtNacionalidad.Size = new System.Drawing.Size(208, 20);
+            this.txtNacionalidad.TabIndex = 6;
             // 
-            // textBox7
+            // txtNacimiento
             // 
-            this.textBox7.Location = new System.Drawing.Point(291, 156);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(124, 20);
-            this.textBox7.TabIndex = 7;
+            this.txtNacimiento.Location = new System.Drawing.Point(291, 156);
+            this.txtNacimiento.Name = "txtNacimiento";
+            this.txtNacimiento.Size = new System.Drawing.Size(124, 20);
+            this.txtNacimiento.TabIndex = 7;
             // 
-            // textBox8
+            // txtgenero
             // 
-            this.textBox8.Location = new System.Drawing.Point(293, 184);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(40, 20);
-            this.textBox8.TabIndex = 8;
+            this.txtgenero.Location = new System.Drawing.Point(293, 184);
+            this.txtgenero.Name = "txtgenero";
+            this.txtgenero.Size = new System.Drawing.Size(40, 20);
+            this.txtgenero.TabIndex = 8;
             // 
-            // textBox9
+            // txtnaci
             // 
-            this.textBox9.Location = new System.Drawing.Point(415, 184);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(257, 20);
-            this.textBox9.TabIndex = 9;
+            this.txtnaci.Location = new System.Drawing.Point(415, 184);
+            this.txtnaci.Name = "txtnaci";
+            this.txtnaci.Size = new System.Drawing.Size(257, 20);
+            this.txtnaci.TabIndex = 9;
             // 
-            // textBox10
+            // txtCui
             // 
-            this.textBox10.Location = new System.Drawing.Point(644, 155);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(124, 20);
-            this.textBox10.TabIndex = 10;
+            this.txtCui.Location = new System.Drawing.Point(644, 155);
+            this.txtCui.Name = "txtCui";
+            this.txtCui.Size = new System.Drawing.Size(124, 20);
+            this.txtCui.TabIndex = 10;
             // 
-            // textBox11
+            // txtEmision
             // 
-            this.textBox11.Location = new System.Drawing.Point(293, 213);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(208, 20);
-            this.textBox11.TabIndex = 11;
+            this.txtEmision.Location = new System.Drawing.Point(293, 213);
+            this.txtEmision.Name = "txtEmision";
+            this.txtEmision.Size = new System.Drawing.Size(208, 20);
+            this.txtEmision.TabIndex = 11;
             // 
-            // textBox12
+            // txtVencimiento
             // 
-            this.textBox12.Location = new System.Drawing.Point(293, 247);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(208, 20);
-            this.textBox12.TabIndex = 12;
+            this.txtVencimiento.Location = new System.Drawing.Point(293, 247);
+            this.txtVencimiento.Name = "txtVencimiento";
+            this.txtVencimiento.Size = new System.Drawing.Size(208, 20);
+            this.txtVencimiento.TabIndex = 12;
             // 
-            // textBox13
+            // txtAutoridad
             // 
-            this.textBox13.Location = new System.Drawing.Point(644, 210);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(208, 20);
-            this.textBox13.TabIndex = 13;
+            this.txtAutoridad.Location = new System.Drawing.Point(644, 210);
+            this.txtAutoridad.Name = "txtAutoridad";
+            this.txtAutoridad.Size = new System.Drawing.Size(208, 20);
+            this.txtAutoridad.TabIndex = 13;
             // 
-            // textBox14
+            // txtLibreta
             // 
-            this.textBox14.Location = new System.Drawing.Point(644, 242);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(126, 20);
-            this.textBox14.TabIndex = 14;
+            this.txtLibreta.Location = new System.Drawing.Point(644, 242);
+            this.txtLibreta.Name = "txtLibreta";
+            this.txtLibreta.Size = new System.Drawing.Size(126, 20);
+            this.txtLibreta.TabIndex = 14;
             // 
             // pictureBox1
             // 
@@ -209,20 +210,20 @@ namespace CapaVista_SGP
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLibreta);
+            this.Controls.Add(this.txtAutoridad);
+            this.Controls.Add(this.txtVencimiento);
+            this.Controls.Add(this.txtEmision);
+            this.Controls.Add(this.txtCui);
+            this.Controls.Add(this.txtnaci);
+            this.Controls.Add(this.txtgenero);
+            this.Controls.Add(this.txtNacimiento);
+            this.Controls.Add(this.txtNacionalidad);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtPasaporte);
+            this.Controls.Add(this.txtPais);
+            this.Controls.Add(this.txttipo);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.Name = "frmImpresionPasaporte";
@@ -238,20 +239,20 @@ namespace CapaVista_SGP
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txttipo;
+        private System.Windows.Forms.TextBox txtPais;
+        private System.Windows.Forms.TextBox txtPasaporte;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtNacionalidad;
+        private System.Windows.Forms.TextBox txtNacimiento;
+        private System.Windows.Forms.TextBox txtgenero;
+        private System.Windows.Forms.TextBox txtnaci;
+        private System.Windows.Forms.TextBox txtCui;
+        private System.Windows.Forms.TextBox txtEmision;
+        private System.Windows.Forms.TextBox txtVencimiento;
+        private System.Windows.Forms.TextBox txtAutoridad;
+        private System.Windows.Forms.TextBox txtLibreta;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
