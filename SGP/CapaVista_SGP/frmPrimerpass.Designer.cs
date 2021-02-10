@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtURL = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtfechafinal = new System.Windows.Forms.TextBox();
+            this.txtfechae = new System.Windows.Forms.TextBox();
+            this.txtsexo = new System.Windows.Forms.TextBox();
             this.txtautoridad = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtfechaN = new System.Windows.Forms.TextBox();
@@ -56,13 +61,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtsexo = new System.Windows.Forms.TextBox();
-            this.txtfechae = new System.Windows.Forms.TextBox();
-            this.txtfechafinal = new System.Windows.Forms.TextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.rbtRenovacion = new System.Windows.Forms.RadioButton();
+            this.rbtNuevo = new System.Windows.Forms.RadioButton();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,8 +78,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.txtURL);
             this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Location = new System.Drawing.Point(9, 67);
@@ -84,29 +90,38 @@
             this.panel3.TabIndex = 15;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button3
+            // txtURL
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(90, 302);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 32);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.txtURL.Location = new System.Drawing.Point(28, 370);
+            this.txtURL.Name = "txtURL";
+            this.txtURL.Size = new System.Drawing.Size(177, 20);
+            this.txtURL.TabIndex = 17;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(90, 266);
+            this.button2.Location = new System.Drawing.Point(15, 273);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 32);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Cargar foto";
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(160, 273);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 32);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Cargar foto";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox1
             // 
@@ -115,6 +130,7 @@
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -122,6 +138,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(169)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.rbtNuevo);
+            this.panel1.Controls.Add(this.rbtRenovacion);
             this.panel1.Controls.Add(this.txtfechafinal);
             this.panel1.Controls.Add(this.txtfechae);
             this.panel1.Controls.Add(this.txtsexo);
@@ -148,7 +166,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSiguiente);
             this.panel1.Controls.Add(this.btnIngresar);
             this.panel1.Location = new System.Drawing.Point(268, 16);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -156,6 +174,31 @@
             this.panel1.Size = new System.Drawing.Size(571, 573);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtfechafinal
+            // 
+            this.txtfechafinal.Enabled = false;
+            this.txtfechafinal.Location = new System.Drawing.Point(310, 403);
+            this.txtfechafinal.Name = "txtfechafinal";
+            this.txtfechafinal.Size = new System.Drawing.Size(100, 20);
+            this.txtfechafinal.TabIndex = 33;
+            this.txtfechafinal.TextChanged += new System.EventHandler(this.txtfechafinal_TextChanged);
+            // 
+            // txtfechae
+            // 
+            this.txtfechae.Enabled = false;
+            this.txtfechae.Location = new System.Drawing.Point(310, 363);
+            this.txtfechae.Name = "txtfechae";
+            this.txtfechae.Size = new System.Drawing.Size(100, 20);
+            this.txtfechae.TabIndex = 32;
+            // 
+            // txtsexo
+            // 
+            this.txtsexo.Enabled = false;
+            this.txtsexo.Location = new System.Drawing.Point(91, 320);
+            this.txtsexo.Name = "txtsexo";
+            this.txtsexo.Size = new System.Drawing.Size(100, 20);
+            this.txtsexo.TabIndex = 31;
             // 
             // txtautoridad
             // 
@@ -179,6 +222,7 @@
             // 
             // txtfechaN
             // 
+            this.txtfechaN.Enabled = false;
             this.txtfechaN.Location = new System.Drawing.Point(248, 279);
             this.txtfechaN.Margin = new System.Windows.Forms.Padding(2);
             this.txtfechaN.Name = "txtfechaN";
@@ -201,6 +245,7 @@
             // 
             // txtnopasaporte
             // 
+            this.txtnopasaporte.Enabled = false;
             this.txtnopasaporte.Location = new System.Drawing.Point(204, 65);
             this.txtnopasaporte.Margin = new System.Windows.Forms.Padding(2);
             this.txtnopasaporte.Name = "txtnopasaporte";
@@ -283,6 +328,7 @@
             // 
             // txtcui
             // 
+            this.txtcui.Enabled = false;
             this.txtcui.Location = new System.Drawing.Point(85, 236);
             this.txtcui.Margin = new System.Windows.Forms.Padding(2);
             this.txtcui.Name = "txtcui";
@@ -291,6 +337,7 @@
             // 
             // txtnacionalidad
             // 
+            this.txtnacionalidad.Enabled = false;
             this.txtnacionalidad.Location = new System.Drawing.Point(186, 198);
             this.txtnacionalidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtnacionalidad.Name = "txtnacionalidad";
@@ -299,6 +346,7 @@
             // 
             // txtapellido
             // 
+            this.txtapellido.Enabled = false;
             this.txtapellido.Location = new System.Drawing.Point(125, 151);
             this.txtapellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtapellido.Name = "txtapellido";
@@ -307,6 +355,7 @@
             // 
             // txtnombre
             // 
+            this.txtnombre.Enabled = false;
             this.txtnombre.Location = new System.Drawing.Point(125, 105);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtnombre.Name = "txtnombre";
@@ -395,18 +444,18 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Tipo";
             // 
-            // button1
+            // btnSiguiente
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(466, 525);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 32);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Siguiente ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSiguiente.BackColor = System.Drawing.Color.White;
+            this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Location = new System.Drawing.Point(466, 525);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(88, 32);
+            this.btnSiguiente.TabIndex = 2;
+            this.btnSiguiente.Text = "Siguiente ";
+            this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnIngresar
             // 
@@ -441,30 +490,40 @@
             this.label1.Location = new System.Drawing.Point(2, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 31);
+            this.label1.Size = new System.Drawing.Size(138, 31);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Primer Pasaporte";
+            this.label1.Text = "Pasaporte";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtsexo
+            // imageList1
             // 
-            this.txtsexo.Location = new System.Drawing.Point(91, 320);
-            this.txtsexo.Name = "txtsexo";
-            this.txtsexo.Size = new System.Drawing.Size(100, 20);
-            this.txtsexo.TabIndex = 31;
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // txtfechae
+            // rbtRenovacion
             // 
-            this.txtfechae.Location = new System.Drawing.Point(310, 363);
-            this.txtfechae.Name = "txtfechae";
-            this.txtfechae.Size = new System.Drawing.Size(100, 20);
-            this.txtfechae.TabIndex = 32;
+            this.rbtRenovacion.AutoSize = true;
+            this.rbtRenovacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtRenovacion.Location = new System.Drawing.Point(351, 23);
+            this.rbtRenovacion.Name = "rbtRenovacion";
+            this.rbtRenovacion.Size = new System.Drawing.Size(111, 24);
+            this.rbtRenovacion.TabIndex = 35;
+            this.rbtRenovacion.TabStop = true;
+            this.rbtRenovacion.Text = "Renovacion";
+            this.rbtRenovacion.UseVisualStyleBackColor = true;
             // 
-            // txtfechafinal
+            // rbtNuevo
             // 
-            this.txtfechafinal.Location = new System.Drawing.Point(310, 403);
-            this.txtfechafinal.Name = "txtfechafinal";
-            this.txtfechafinal.Size = new System.Drawing.Size(100, 20);
-            this.txtfechafinal.TabIndex = 33;
+            this.rbtNuevo.AutoSize = true;
+            this.rbtNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtNuevo.Location = new System.Drawing.Point(460, 23);
+            this.rbtNuevo.Name = "rbtNuevo";
+            this.rbtNuevo.Size = new System.Drawing.Size(72, 24);
+            this.rbtNuevo.TabIndex = 36;
+            this.rbtNuevo.TabStop = true;
+            this.rbtNuevo.Text = "Nuevo";
+            this.rbtNuevo.UseVisualStyleBackColor = true;
             // 
             // frmPrimerpass
             // 
@@ -479,6 +538,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrimerpass";
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -497,12 +557,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -525,5 +585,9 @@
         private System.Windows.Forms.TextBox txtsexo;
         private System.Windows.Forms.TextBox txtfechafinal;
         private System.Windows.Forms.TextBox txtfechae;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.TextBox txtURL;
+        private System.Windows.Forms.RadioButton rbtNuevo;
+        private System.Windows.Forms.RadioButton rbtRenovacion;
     }
 }

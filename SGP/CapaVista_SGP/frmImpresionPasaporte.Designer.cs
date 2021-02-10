@@ -30,7 +30,7 @@ namespace CapaVista_SGP
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImpresionPasaporte));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.txttipo = new System.Windows.Forms.TextBox();
             this.txtPais = new System.Windows.Forms.TextBox();
             this.txtPasaporte = new System.Windows.Forms.TextBox();
@@ -50,20 +50,23 @@ namespace CapaVista_SGP
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnPrint
             // 
-            this.button1.Location = new System.Drawing.Point(32, 345);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 90);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "IMPRIMIR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPrint.Location = new System.Drawing.Point(32, 345);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(166, 90);
+            this.btnPrint.TabIndex = 0;
+            this.btnPrint.Text = "IMPRIMIR";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // txttipo
             // 
+            this.txttipo.Enabled = false;
             this.txttipo.Location = new System.Drawing.Point(306, 40);
             this.txttipo.Name = "txttipo";
             this.txttipo.Size = new System.Drawing.Size(44, 20);
@@ -71,6 +74,7 @@ namespace CapaVista_SGP
             // 
             // txtPais
             // 
+            this.txtPais.Enabled = false;
             this.txtPais.Location = new System.Drawing.Point(455, 39);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(44, 20);
@@ -79,6 +83,7 @@ namespace CapaVista_SGP
             // 
             // txtPasaporte
             // 
+            this.txtPasaporte.Enabled = false;
             this.txtPasaporte.Location = new System.Drawing.Point(580, 38);
             this.txtPasaporte.Name = "txtPasaporte";
             this.txtPasaporte.Size = new System.Drawing.Size(208, 20);
@@ -87,6 +92,7 @@ namespace CapaVista_SGP
             // 
             // txtApellido
             // 
+            this.txtApellido.Enabled = false;
             this.txtApellido.Location = new System.Drawing.Point(291, 69);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(208, 20);
@@ -94,6 +100,7 @@ namespace CapaVista_SGP
             // 
             // txtNombre
             // 
+            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(291, 98);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(208, 20);
@@ -101,6 +108,7 @@ namespace CapaVista_SGP
             // 
             // txtNacionalidad
             // 
+            this.txtNacionalidad.Enabled = false;
             this.txtNacionalidad.Location = new System.Drawing.Point(291, 127);
             this.txtNacionalidad.Name = "txtNacionalidad";
             this.txtNacionalidad.Size = new System.Drawing.Size(208, 20);
@@ -108,6 +116,7 @@ namespace CapaVista_SGP
             // 
             // txtNacimiento
             // 
+            this.txtNacimiento.Enabled = false;
             this.txtNacimiento.Location = new System.Drawing.Point(291, 156);
             this.txtNacimiento.Name = "txtNacimiento";
             this.txtNacimiento.Size = new System.Drawing.Size(124, 20);
@@ -115,6 +124,7 @@ namespace CapaVista_SGP
             // 
             // txtgenero
             // 
+            this.txtgenero.Enabled = false;
             this.txtgenero.Location = new System.Drawing.Point(293, 184);
             this.txtgenero.Name = "txtgenero";
             this.txtgenero.Size = new System.Drawing.Size(40, 20);
@@ -122,6 +132,7 @@ namespace CapaVista_SGP
             // 
             // txtnaci
             // 
+            this.txtnaci.Enabled = false;
             this.txtnaci.Location = new System.Drawing.Point(415, 184);
             this.txtnaci.Name = "txtnaci";
             this.txtnaci.Size = new System.Drawing.Size(257, 20);
@@ -129,6 +140,7 @@ namespace CapaVista_SGP
             // 
             // txtCui
             // 
+            this.txtCui.Enabled = false;
             this.txtCui.Location = new System.Drawing.Point(644, 155);
             this.txtCui.Name = "txtCui";
             this.txtCui.Size = new System.Drawing.Size(124, 20);
@@ -136,6 +148,7 @@ namespace CapaVista_SGP
             // 
             // txtEmision
             // 
+            this.txtEmision.Enabled = false;
             this.txtEmision.Location = new System.Drawing.Point(293, 213);
             this.txtEmision.Name = "txtEmision";
             this.txtEmision.Size = new System.Drawing.Size(208, 20);
@@ -143,6 +156,7 @@ namespace CapaVista_SGP
             // 
             // txtVencimiento
             // 
+            this.txtVencimiento.Enabled = false;
             this.txtVencimiento.Location = new System.Drawing.Point(293, 247);
             this.txtVencimiento.Name = "txtVencimiento";
             this.txtVencimiento.Size = new System.Drawing.Size(208, 20);
@@ -150,6 +164,7 @@ namespace CapaVista_SGP
             // 
             // txtAutoridad
             // 
+            this.txtAutoridad.Enabled = false;
             this.txtAutoridad.Location = new System.Drawing.Point(644, 210);
             this.txtAutoridad.Name = "txtAutoridad";
             this.txtAutoridad.Size = new System.Drawing.Size(208, 20);
@@ -157,6 +172,7 @@ namespace CapaVista_SGP
             // 
             // txtLibreta
             // 
+            this.txtLibreta.Enabled = false;
             this.txtLibreta.Location = new System.Drawing.Point(644, 242);
             this.txtLibreta.Name = "txtLibreta";
             this.txtLibreta.Size = new System.Drawing.Size(126, 20);
@@ -167,11 +183,13 @@ namespace CapaVista_SGP
             this.pictureBox1.Location = new System.Drawing.Point(1, 69);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(239, 256);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
             // textBox15
             // 
+            this.textBox15.Enabled = false;
             this.textBox15.Location = new System.Drawing.Point(111, 458);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(152, 20);
@@ -179,6 +197,7 @@ namespace CapaVista_SGP
             // 
             // textBox16
             // 
+            this.textBox16.Enabled = false;
             this.textBox16.Location = new System.Drawing.Point(284, 458);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(104, 20);
@@ -186,6 +205,7 @@ namespace CapaVista_SGP
             // 
             // textBox17
             // 
+            this.textBox17.Enabled = false;
             this.textBox17.Location = new System.Drawing.Point(427, 458);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(152, 20);
@@ -193,10 +213,15 @@ namespace CapaVista_SGP
             // 
             // textBox18
             // 
+            this.textBox18.Enabled = false;
             this.textBox18.Location = new System.Drawing.Point(603, 457);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(141, 20);
             this.textBox18.TabIndex = 19;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // frmImpresionPasaporte
             // 
@@ -224,8 +249,9 @@ namespace CapaVista_SGP
             this.Controls.Add(this.txtPasaporte);
             this.Controls.Add(this.txtPais);
             this.Controls.Add(this.txttipo);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPrint);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmImpresionPasaporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmImpresionPasaporte";
@@ -238,7 +264,7 @@ namespace CapaVista_SGP
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txttipo;
         private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.TextBox txtPasaporte;
@@ -258,5 +284,6 @@ namespace CapaVista_SGP
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

@@ -121,14 +121,14 @@ namespace CapaVista_SGP
             // centrosToolStripMenuItem
             // 
             this.centrosToolStripMenuItem.Name = "centrosToolStripMenuItem";
-            this.centrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.centrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.centrosToolStripMenuItem.Text = "Centros";
             this.centrosToolStripMenuItem.Click += new System.EventHandler(this.centrosToolStripMenuItem_Click);
             // 
             // tipoPasaporteToolStripMenuItem
             // 
             this.tipoPasaporteToolStripMenuItem.Name = "tipoPasaporteToolStripMenuItem";
-            this.tipoPasaporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoPasaporteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tipoPasaporteToolStripMenuItem.Text = "Tipo Pasaporte";
             // 
             // procesoToolStripMenuItem
@@ -305,7 +305,8 @@ namespace CapaVista_SGP
             // 
             // txtusuario
             // 
-            this.txtusuario.Location = new System.Drawing.Point(693, 3);
+            this.txtusuario.Enabled = false;
+            this.txtusuario.Location = new System.Drawing.Point(834, 4);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(100, 20);
             this.txtusuario.TabIndex = 4;
