@@ -27,6 +27,13 @@ namespace CapaControlador_SGP
         static string autoridad;
         static string nolibreta;
         static string URL;
+        static string usuario;
+
+        public string usuariog
+        {
+            get { return usuario; }
+            set { usuario = value; }
+        }
 
         public string tipog
         {

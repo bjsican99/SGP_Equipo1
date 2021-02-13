@@ -41,6 +41,12 @@ namespace CapaControlador_SGP
             string Consulta = "SELECT * FROM " + Tabla + " Where pk_cui = " + CodPedido + ";";
             return Modelo.funcConsulta(Consulta);
         }
+
+        public OdbcDataReader funcConsultaBanco(string Tabla, string CodPedido)
+        {
+            string Consulta = "SELECT estado_boleta FROM " + Tabla + " Where pk_numero_boleta = " + CodPedido + ";";
+            return Modelo.funcConsulta(Consulta);
+        }
         public OdbcDataReader funcConsultaDetallesBoleto(string Tabla, string CodPedido)
         {
             string Consulta = "SELECT * FROM " + Tabla + " Where pk_numero_boleto = " + CodPedido + ";";
@@ -61,5 +67,11 @@ namespace CapaControlador_SGP
             string Consulta = "UPDATE  tbl_pasaporte SET fecha_emision = "+glo.fecha_emisiong+", fecha_vencimiento = "+glo.fecha_expiraciong+" where pk_id_pasaporte = " + glo.pk_cuig + ";";
             return Modelo.funcModificar(Consulta);
         }
+
+        /*public OdbcDataReader funcActualizarCita()
+        {
+            string Consulta = "UPDATE tbl_cita SET fecha_hora_cita = " ++ "hora_cita = " ++;
+            return Modelo.funcModificar(Consulta);
+        }*/
     }
 }
