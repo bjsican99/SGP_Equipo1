@@ -1,48 +1,34 @@
-﻿using CapaControlador_SGP;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVista_SGP
+namespace CapaVista_SGP.Mantenimientos
 {
-    public partial class frmModiCita : Form
+    public partial class frmMantenimientoPasaporte : Form
     {
         string UsuarioAplicacion;
-        clsVariableGlobal glo = new clsVariableGlobal();
-        clsControladorPasaporte controlador = new clsControladorPasaporte();
-        public frmModiCita()
+        public frmMantenimientoPasaporte(string usuario)
         {
             InitializeComponent();
-            CargarCombobox();
             rbtn_habilitado.Checked = true;
-            UsuarioAplicacion = glo.usuariog;
+            UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
         }
 
-        public void CargarCombobox()
-        {
-            //llenado de combobox de producto
-            cmb_centro.DisplayMember = "nombre_centro";
-            cmb_centro.ValueMember = "pk_id_centro";
-            cmb_centro.DataSource = controlador.funcObtenerCamposComboboxPas("pk_id_centro", "nombre_centro", "tbl_centro", "estado");
-            cmb_centro.SelectedIndex = -1;
-
-        }
         private void navegador1_Load(object sender, EventArgs e)
         {
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //llenado de  parametros para la aplicacion 
             navegador1.aplicacion = 3307;
-            navegador1.tbl = "tbl_cita";
-            navegador1.campoEstado = "estado_cita";
+            navegador1.tbl = "tbl_tipo_pasaporte";
+            navegador1.campoEstado = "estado";
 
             //se agregan los componentes del formulario a la lista tipo control
 
@@ -81,7 +67,7 @@ namespace CapaVista_SGP
 
             navegador1.control = lista;
             navegador1.formulario = this;
-            navegador1.DatosActualizar = dvg_generar_cita;
+            navegador1.DatosActualizar = dgv_tipo_pasaporte;
             navegador1.procActualizarData();
             navegador1.procCargar();
             navegador1.ayudaRuta = "AYUDAS/AyudasMRP.chm";
@@ -106,29 +92,9 @@ namespace CapaVista_SGP
             }
         }
 
-        private void cmb_centro_SelectedIndexChanged(object sender, EventArgs e)
+        private void dgv_tipo_pasaporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_estado.Text = "1";
-            if (cmb_centro.SelectedIndex != -1)
-            {
-                txt_centro.Text = cmb_centro.SelectedValue.ToString();
-            }
-        }
 
-        private void txt_centro_TextChanged(object sender, EventArgs e)
-        {
-            if ((txt_centro.Text != "") && (int.Parse(txt_centro.Text) > 4))
-            {
-                OdbcDataReader reader = controlador.funcConsultaCombo("pk_id_centro", "tbl_centro", "estado", "nombre_centro", txt_centro.Text);
-                if (reader.Read())
-                {
-                    cmb_centro.Text = reader.GetString(0);
-                }
-                else
-                {
-                    cmb_centro.SelectedIndex = -1;
-                }
-            }
         }
     }
 }

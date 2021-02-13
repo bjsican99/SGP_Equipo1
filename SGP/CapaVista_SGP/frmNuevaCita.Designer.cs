@@ -31,21 +31,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEstadoBanco = new System.Windows.Forms.TextBox();
+            this.txt_dpi = new System.Windows.Forms.TextBox();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
+            this.txt_apellido = new System.Windows.Forms.TextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoleta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.btnVerificar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,57 +80,64 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(169)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtEstadoBanco);
+            this.panel1.Controls.Add(this.txt_dpi);
+            this.panel1.Controls.Add(this.txt_telefono);
+            this.panel1.Controls.Add(this.txt_apellido);
+            this.panel1.Controls.Add(this.txt_nombre);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtBoleta);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnSalir);
-            this.panel1.Controls.Add(this.btnIngresar);
+            this.panel1.Controls.Add(this.btnSiguiente);
+            this.panel1.Controls.Add(this.btnVerificar);
+            this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Location = new System.Drawing.Point(16, 17);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 343);
             this.panel1.TabIndex = 7;
             // 
-            // textBox5
+            // txtEstadoBanco
             // 
-            this.textBox5.Location = new System.Drawing.Point(177, 229);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(159, 20);
-            this.textBox5.TabIndex = 12;
+            this.txtEstadoBanco.Location = new System.Drawing.Point(438, 73);
+            this.txtEstadoBanco.Name = "txtEstadoBanco";
+            this.txtEstadoBanco.Size = new System.Drawing.Size(46, 20);
+            this.txtEstadoBanco.TabIndex = 13;
             // 
-            // textBox4
+            // txt_dpi
             // 
-            this.textBox4.Location = new System.Drawing.Point(177, 189);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(159, 20);
-            this.textBox4.TabIndex = 11;
+            this.txt_dpi.Location = new System.Drawing.Point(177, 229);
+            this.txt_dpi.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_dpi.Name = "txt_dpi";
+            this.txt_dpi.Size = new System.Drawing.Size(159, 20);
+            this.txt_dpi.TabIndex = 12;
             // 
-            // textBox3
+            // txt_telefono
             // 
-            this.textBox3.Location = new System.Drawing.Point(177, 152);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 20);
-            this.textBox3.TabIndex = 10;
+            this.txt_telefono.Location = new System.Drawing.Point(177, 189);
+            this.txt_telefono.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(159, 20);
+            this.txt_telefono.TabIndex = 11;
             // 
-            // textBox2
+            // txt_apellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(177, 109);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 20);
-            this.textBox2.TabIndex = 9;
+            this.txt_apellido.Location = new System.Drawing.Point(177, 152);
+            this.txt_apellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_apellido.Name = "txt_apellido";
+            this.txt_apellido.Size = new System.Drawing.Size(159, 20);
+            this.txt_apellido.TabIndex = 10;
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(177, 109);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(159, 20);
+            this.txt_nombre.TabIndex = 9;
             // 
             // label6
             // 
@@ -180,13 +187,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Nombre";
             // 
-            // textBox1
+            // txtBoleta
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 73);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtBoleta.Location = new System.Drawing.Point(177, 73);
+            this.txtBoleta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBoleta.Name = "txtBoleta";
+            this.txtBoleta.Size = new System.Drawing.Size(159, 20);
+            this.txtBoleta.TabIndex = 4;
             // 
             // label2
             // 
@@ -201,44 +208,44 @@
             this.label2.Text = "No. Boleta\r\nde Banco";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // button1
+            // btnSiguiente
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(397, 293);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 32);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Siguiente ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSiguiente.BackColor = System.Drawing.Color.White;
+            this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Location = new System.Drawing.Point(397, 293);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(88, 32);
+            this.btnSiguiente.TabIndex = 2;
+            this.btnSiguiente.Text = "Siguiente ";
+            this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnSalir
+            // btnVerificar
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.White;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(356, 67);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(77, 29);
-            this.btnSalir.TabIndex = 1;
-            this.btnSalir.Text = "Verificar";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnVerificar.BackColor = System.Drawing.Color.White;
+            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificar.Location = new System.Drawing.Point(356, 67);
+            this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(77, 29);
+            this.btnVerificar.TabIndex = 1;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = false;
+            this.btnVerificar.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnIngresar
+            // btnCerrar
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.White;
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(290, 293);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(88, 32);
-            this.btnIngresar.TabIndex = 0;
-            this.btnIngresar.Text = "Cerrar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnCerrar.BackColor = System.Drawing.Color.White;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(290, 293);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(88, 32);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // panel3
             // 
@@ -250,13 +257,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(534, 379);
             this.panel3.TabIndex = 13;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(438, 73);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(46, 20);
-            this.textBox6.TabIndex = 13;
             // 
             // frmNuevaCita
             // 
@@ -283,20 +283,20 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_dpi;
+        private System.Windows.Forms.TextBox txt_telefono;
+        private System.Windows.Forms.TextBox txt_apellido;
+        private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoleta;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.Button btnVerificar;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtEstadoBanco;
     }
 }

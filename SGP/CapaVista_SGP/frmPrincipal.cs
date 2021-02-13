@@ -1,4 +1,5 @@
-﻿using CapaVista_SGP.Mantenimientos;
+﻿using CapaControlador_SGP;
+using CapaVista_SGP.Mantenimientos;
 using CapaVistaSeguridad;
 using CapaVistaSeguridad.Formularios;
 using CapaVistaSeguridad.Formularios.Mantenimientos;
@@ -22,6 +23,7 @@ namespace CapaVista_SGP
         public frmPrincipal()
         {
             InitializeComponent();
+            
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -121,6 +123,8 @@ namespace CapaVista_SGP
 
         private void citasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            clsVariableGlobal glo = new clsVariableGlobal();
+            glo.usuariog = txtusuario.Text;
             frmCita Cita = new frmCita();
             Cita.MdiParent = this;
             Cita.Show();
@@ -297,6 +301,42 @@ namespace CapaVista_SGP
             }
 
             
+        }
+
+        private void tipoPasaporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("3307", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso a Mantenimiento Linea De Productos", 5);
+                frmMantenimientoPasaporte frmMantenimientoPasaporte = new frmMantenimientoPasaporte(txtusuario.Text);
+                frmMantenimientoPasaporte.MdiParent = this;
+                frmMantenimientoPasaporte.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ingresar a Mantenimiento Linea De Productos", 3307);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void motivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("3307", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso a Mantenimiento Linea De Productos", 5);
+                frmMantenimientoMotivo mantenimientoMotivo = new frmMantenimientoMotivo(txtusuario.Text);
+                mantenimientoMotivo.MdiParent = this;
+                mantenimientoMotivo.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ingresar a Mantenimiento Linea De Productos", 3307);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
         }
     }
 }

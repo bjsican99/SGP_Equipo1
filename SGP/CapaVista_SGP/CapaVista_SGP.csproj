@@ -114,6 +114,18 @@
     <Compile Include="frmVerificar.Designer.cs">
       <DependentUpon>frmVerificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoMotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoMotivo.Designer.cs">
+      <DependentUpon>frmMantenimientoMotivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoPasaporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoPasaporte.Designer.cs">
+      <DependentUpon>frmMantenimientoPasaporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\frmMantenimientoCentro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmMantenimientoCentro.resx">
       <DependentUpon>frmMantenimientoCentro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmMantenimientoMotivo.resx">
+      <DependentUpon>frmMantenimientoMotivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmMantenimientoPasaporte.resx">
+      <DependentUpon>frmMantenimientoPasaporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

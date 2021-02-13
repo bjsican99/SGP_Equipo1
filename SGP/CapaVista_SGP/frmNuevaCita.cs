@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CapaControlador_SGP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,10 +17,12 @@ namespace CapaVista_SGP
         public frmNuevaCita()
         {
             InitializeComponent();
-            textBox2.Enabled = false;
-            textBox3.Enabled = false;
-            textBox4.Enabled = false;
-            textBox5.Enabled = false;
+            txt_nombre.Enabled = false;
+            txt_apellido.Enabled = false;
+            txt_telefono.Enabled = false;
+            txt_dpi.Enabled = false;
+            btnSiguiente.Enabled = false;
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -43,13 +47,41 @@ namespace CapaVista_SGP
             fecha.Show();
         }
 
+        private void VerificarBanco()
+        {
+            clsControladorPasaporte controlador = new clsControladorPasaporte();
+
+            if ((txtBoleta.Text != "") && (int.Parse(txtBoleta.Text) > 4))
+            {
+                
+
+                    OdbcDataReader reader = controlador.funcConsultaBanco("tbl_banco", txtBoleta.Text);
+                try
+                {
+                    if (reader.Read())
+                    {
+                        txtEstadoBanco.Text = reader.GetString(0);
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
+
+            }
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            textBox2.Enabled = true;
-            textBox3.Enabled = true;
-            textBox4.Enabled = true;
-            textBox5.Enabled = true;
-
+            VerificarBanco();
+            if (txtEstadoBanco.Text == "1")
+            {
+                txt_nombre.Enabled = true;
+                txt_apellido.Enabled = true;
+                txt_telefono.Enabled = true;
+                txt_dpi.Enabled = true;
+                btnSiguiente.Enabled = true;
+            }
         }
     }
 }

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsGlobalCita.cs" />
     <Compile Include="clsVariableGlobal.cs" />
     <Compile Include="clsControladorPasaporte.cs" />
     <Compile Include="clsValidaciones.cs" />
