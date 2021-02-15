@@ -170,6 +170,7 @@ namespace CapaVista_SGP.Mantenimientos
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmMantenimientoCentro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMantenimientoCentro";
             this.Load += new System.EventHandler(this.frmMantenimientoCentro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCentro)).EndInit();

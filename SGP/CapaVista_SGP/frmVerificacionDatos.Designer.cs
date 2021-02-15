@@ -30,6 +30,7 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEstadoBoleto = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBoleto = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -39,10 +40,6 @@
             this.txtBoleto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCUI = new System.Windows.Forms.DataGridView();
-            this.txtCUI = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.CUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +53,10 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtEstadoBoleto = new System.Windows.Forms.TextBox();
+            this.txtCUI = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCUI)).BeginInit();
@@ -96,6 +96,15 @@
             this.panel1.Size = new System.Drawing.Size(656, 385);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtEstadoBoleto
+            // 
+            this.txtEstadoBoleto.Enabled = false;
+            this.txtEstadoBoleto.Location = new System.Drawing.Point(488, 292);
+            this.txtEstadoBoleto.Name = "txtEstadoBoleto";
+            this.txtEstadoBoleto.Size = new System.Drawing.Size(16, 20);
+            this.txtEstadoBoleto.TabIndex = 23;
+            this.txtEstadoBoleto.Visible = false;
             // 
             // btnModificar
             // 
@@ -216,50 +225,6 @@
             this.dgvCUI.TabIndex = 14;
             this.dgvCUI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCUI_CellContentClick);
             // 
-            // txtCUI
-            // 
-            this.txtCUI.Location = new System.Drawing.Point(167, 26);
-            this.txtCUI.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCUI.Name = "txtCUI";
-            this.txtCUI.Size = new System.Drawing.Size(193, 20);
-            this.txtCUI.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
-            this.label7.Location = new System.Drawing.Point(96, 15);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 31);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "CUI";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(758, 45);
-            this.panel2.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
-            this.label1.Location = new System.Drawing.Point(2, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Pasaporte";
-            // 
             // CUI
             // 
             this.CUI.HeaderText = "CUI";
@@ -325,12 +290,49 @@
             this.Column12.HeaderText = "Apellido Madre";
             this.Column12.Name = "Column12";
             // 
-            // txtEstadoBoleto
+            // txtCUI
             // 
-            this.txtEstadoBoleto.Location = new System.Drawing.Point(488, 292);
-            this.txtEstadoBoleto.Name = "txtEstadoBoleto";
-            this.txtEstadoBoleto.Size = new System.Drawing.Size(16, 20);
-            this.txtEstadoBoleto.TabIndex = 23;
+            this.txtCUI.Location = new System.Drawing.Point(167, 26);
+            this.txtCUI.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCUI.Name = "txtCUI";
+            this.txtCUI.Size = new System.Drawing.Size(193, 20);
+            this.txtCUI.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
+            this.label7.Location = new System.Drawing.Point(96, 15);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 31);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "CUI";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(758, 45);
+            this.panel2.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
+            this.label1.Location = new System.Drawing.Point(2, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 31);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Pasaporte";
             // 
             // frmVerificacionDatos
             // 

@@ -157,6 +157,7 @@ namespace CapaVista_SGP.Mantenimientos
             this.Controls.Add(this.label1);
             this.Controls.Add(this.navegador1);
             this.Name = "frmMantenimientoMotivo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMantenimientoMotivo";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_motivo)).EndInit();
             this.ResumeLayout(false);

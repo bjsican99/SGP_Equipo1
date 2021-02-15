@@ -35,6 +35,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbtNuevo = new System.Windows.Forms.RadioButton();
+            this.rbtRenovacion = new System.Windows.Forms.RadioButton();
             this.txtfechafinal = new System.Windows.Forms.TextBox();
             this.txtfechae = new System.Windows.Forms.TextBox();
             this.txtsexo = new System.Windows.Forms.TextBox();
@@ -66,8 +68,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.rbtRenovacion = new System.Windows.Forms.RadioButton();
-            this.rbtNuevo = new System.Windows.Forms.RadioButton();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -174,6 +174,32 @@
             this.panel1.Size = new System.Drawing.Size(571, 573);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // rbtNuevo
+            // 
+            this.rbtNuevo.AutoSize = true;
+            this.rbtNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtNuevo.ForeColor = System.Drawing.Color.Maroon;
+            this.rbtNuevo.Location = new System.Drawing.Point(378, 82);
+            this.rbtNuevo.Name = "rbtNuevo";
+            this.rbtNuevo.Size = new System.Drawing.Size(111, 35);
+            this.rbtNuevo.TabIndex = 36;
+            this.rbtNuevo.TabStop = true;
+            this.rbtNuevo.Text = "Nuevo";
+            this.rbtNuevo.UseVisualStyleBackColor = true;
+            // 
+            // rbtRenovacion
+            // 
+            this.rbtRenovacion.AutoSize = true;
+            this.rbtRenovacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtRenovacion.ForeColor = System.Drawing.Color.Maroon;
+            this.rbtRenovacion.Location = new System.Drawing.Point(378, 49);
+            this.rbtRenovacion.Name = "rbtRenovacion";
+            this.rbtRenovacion.Size = new System.Drawing.Size(176, 35);
+            this.rbtRenovacion.TabIndex = 35;
+            this.rbtRenovacion.TabStop = true;
+            this.rbtRenovacion.Text = "Renovacion";
+            this.rbtRenovacion.UseVisualStyleBackColor = true;
             // 
             // txtfechafinal
             // 
@@ -500,30 +526,6 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // rbtRenovacion
-            // 
-            this.rbtRenovacion.AutoSize = true;
-            this.rbtRenovacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtRenovacion.Location = new System.Drawing.Point(351, 23);
-            this.rbtRenovacion.Name = "rbtRenovacion";
-            this.rbtRenovacion.Size = new System.Drawing.Size(111, 24);
-            this.rbtRenovacion.TabIndex = 35;
-            this.rbtRenovacion.TabStop = true;
-            this.rbtRenovacion.Text = "Renovacion";
-            this.rbtRenovacion.UseVisualStyleBackColor = true;
-            // 
-            // rbtNuevo
-            // 
-            this.rbtNuevo.AutoSize = true;
-            this.rbtNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtNuevo.Location = new System.Drawing.Point(460, 23);
-            this.rbtNuevo.Name = "rbtNuevo";
-            this.rbtNuevo.Size = new System.Drawing.Size(72, 24);
-            this.rbtNuevo.TabIndex = 36;
-            this.rbtNuevo.TabStop = true;
-            this.rbtNuevo.Text = "Nuevo";
-            this.rbtNuevo.UseVisualStyleBackColor = true;
             // 
             // frmPrimerpass
             // 

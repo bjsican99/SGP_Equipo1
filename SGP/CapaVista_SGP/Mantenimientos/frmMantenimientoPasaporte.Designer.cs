@@ -153,6 +153,7 @@ namespace CapaVista_SGP.Mantenimientos
             this.Controls.Add(this.label1);
             this.Controls.Add(this.navegador1);
             this.Name = "frmMantenimientoPasaporte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tipo_pasaporte)).EndInit();
             this.ResumeLayout(false);

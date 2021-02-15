@@ -44,7 +44,7 @@ namespace CapaVista_SGP
             {
                 dgvCUI.Rows.Clear();
 
-                OdbcDataReader mostrar = controlador.funcConsultaDetallesCUI("tbl_renap", txtCUI.Text);
+                OdbcDataReader mostrar = controlador.funcConsultaDetallesCUI("tbl_usuario_pasaporte", txtCUI.Text);
                 try
                 {
                     while (mostrar.Read())
