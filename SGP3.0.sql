@@ -136,7 +136,16 @@ direccion_centro varchar(50),
 estado int(1),
 PRIMARY KEY (pk_id_centro)
 );
--- citas
+-- motivo citas
+DROP TABLE IF EXISTS tbl_motivo;
+CREATE TABLE if not exists tbl_motivo (
+ pk_id_motivo int NOT NULL auto_increment,
+ motivo varchar(50),
+ estado int(1),
+PRIMARY KEY (pk_id_motivo)
+);
+
+-- cita
 DROP TABLE IF EXISTS tbl_cita;
 CREATE TABLE if not exists tbl_cita (
   pk_cita int NOT NULL auto_increment,
@@ -144,11 +153,13 @@ CREATE TABLE if not exists tbl_cita (
   apellido_solicitante varchar(50),
   fk_numero_boleta int,
   fk_id_centro int,
-  fecha_hora_cita datetime,
+  fecha_cita date,
+  hora_cita time,
+  fk_id_motivo_cita int,
   estado_cita tinyint(1) DEFAULT NULL,
-  motivo_cita varchar(50),
   PRIMARY KEY (pk_cita),
-  foreign key (fk_id_centro) references tbl_centro(pk_id_centro)
+  foreign key (fk_id_centro) references tbl_centro(pk_id_centro),
+  foreign key (fk_id_motivo_cita) references tbl_motivo(pk_id_motivo)
 ) ;
 
 -- tipo pasaporte
@@ -206,4 +217,126 @@ fk_id_cita int,
 primary key (pk_id_persona_cita),
 foreign key (fk_id_usuario_pasaporte) references tbl_usuario_pasaporte(pk_id_usuario_pasaporte),
 foreign key (fk_id_cita) references tbl_cita(pk_cita)
-)
+);
+######SEGURIDAD--------------------------------------------------------------------
+INSERT INTO login VALUES 
+('1', 'sistema', 'bi0PL96rbxVRPKJQsLJJAg==', 'Usuario de prueba', '1'),
+('2', 'bjsican', '0FOYy5u5h0djKjzCYqfvkg==', 'Billy Sican', '1'),
+('3', 'bmaza', 'xTfsC3/XR/CVyDvNr1Fs+g==', 'Bryan Mazariegos', '1'),
+('4', 'jsican', 'jsican', 'Jeshua Sican', '0'),
+('5', 'jmorataya', '123', 'Julio Morataya', '0'),
+('6', 'admin', 'T+4Ai6O3CR0kJYxCgXy2jA==', 'Administrador', '1');
+
+
+INSERT INTO `modulo` VALUES (1,'Seguridad','Aplicaciones de seguridad',1),(2,'Consultas','Consultas Inteligentes',1),
+(3,'Reporteador','Aplicaciones de Reporteador',1),(4,'HRM','Aplicaciones de Recursos Humanos',1),
+(5,'FRM','Aplicaciones de Finanzas',1),(6,'SCM','Aplicaciones Control de Inventario',1),(7,'MRP','Aplicaciones de Produccion',1),
+(8,'CRM','Aplicaciones de Ventas',1);
+
+INSERT INTO perfil VALUES 
+('1', 'Admin', 'Administracion del programa', '1'),
+('2', 'Sistema', 'Administrador del sistema', '1'),
+('3', 'Digitador', 'Digitador para Cuentas', '1'),
+('4', 'Consultor', 'Unicamente consultas ', '1'),
+('5', 'Reportes', 'Ingreso y consultas de reportes', '1'),
+('6', 'Pruebas', 'pruebas', '1'),
+('7', 'Administrador', 'Administrador del MRP', '1');
+
+
+INSERT INTO aplicacion VALUES 
+('1', '1', 'Login', 'Ventana de Ingreso', '1'),
+('2', '1', 'Mantenimiento Usuario', 'Mantenimientos de usuario', '1'),
+('3', '1', 'Mantenimiento Aplicacion', 'ABC de las Aplicaciones', '1'),
+('4', '1', 'Mantenimiento Perfil', 'ABC de perfiles', '1'),
+('5', '1', 'Asignacion de Aplicaciones a Perfil', 'Asignacion Aplicacion y perfil', '1'),
+('6', '1', 'Asignacaion de Aplicaciones', 'Asignacion especificas a un usuario', '1'),
+('7', '1', 'Consulta Aplicacion', 'Mantenimiento de Aplicaciones', '1'),
+('8', '1', 'Agregar Modulo', 'Mantenimientos de Modulos', '1'),
+('9', '1', 'Consultar Perfil', 'Consultas de perfiles disponibles', '1'),
+('10', '1', 'Permisos', 'Asignar permisos a perfiles y aplicaciones', '1'),
+('11', '1', 'Cambio de Contraseña', 'Cambia las contraseñas', '1'),
+('2301', '6', 'Linea Producto', 'lINEA', '1'),
+('2302', '6', 'Categoria Producto', 'Categoria', '1'),
+('2303', '6', 'Producto', 'Producto', '1'),
+('2304', '6', 'Departamento', 'Deptos', '1'),
+('2305', '6', 'Municipio', 'Muni depto', '1'),
+('2306', '6', 'Ruta', 'Rutas', '1'),
+('2307', '6', 'Proveedores', 'Nada', '1'),
+('2308', '6', 'Telefono Proveedor', 'Telefonos ', '1'),
+('2309', '6', 'Correo Proveedor', 'Correos', '1'),
+('2310', '6', 'Pais', 'Pais de Proveedor', '1'),
+('2311', '6', 'Marca', 'Contiene la Marca de Vehiculos', '1'),
+('2312', '6', 'Vehiculo', 'Vehiculos usados para traslados', '1'),
+('2313', '6', 'Bodega', 'Localizacion de bodegas', '1'),
+('2314', '6', 'Encargado Bodega', 'Empleado dentro del area de bodegas', '1'),
+('2315', '6', 'Tipo de Movimiento', 'Movimientos de Inventarios', '1'),
+('2316', '6', 'Compras y Pedidos', 'Gestión de Órdenes de Compra y Pedido', '1'),
+('2318', '6', 'Fabrica', 'Fabrica', '1'),
+('3301', '7', 'MDI MRP', 'Ventana Principal MRP', '1'),
+('3302', '7', 'Mantenimiento Producto', 'Mantenimiento de los productos', '1'),
+('3303', '7', 'Mantenimiento de Categoria de produccion', 'Mantenimiento de Categoria de productos', '1'),
+('3304', '7', 'Mantenimiento de Estado de Produccion', 'Mantenimiento de Estados de  produccion', '1'),
+('3305', '7', 'Mantenimiento de Linea de produccion MRP', 'Mantenimiento de MRP para linea de producto', '1'),
+('3306', '7', 'Mantenimiento de Encabezado de receta', 'Mantenimiento de MRP de reseta ', '1'),
+('3307', '7', 'Mantenimiento de Detalle de Receta', 'Mantenimiento del detalle de la receta', '1'),
+('3308', '7', 'Proceso Resepcion de pedidos especiales', 'Proceso para ingreso de pedidos', '1');
+
+
+
+INSERT INTO permiso VALUES 
+('1', '1', '1', '1', '1', '1'),
+('2', '1', '0', '0', '1', '1'),
+('3', '1', '1', '1', '0', '0'),
+('4', '1', '1', '1', '1', '1'),
+('5', '1', '1', '1', '1', '1'),
+('6', '1', '1', '1', '1', '1'),
+('7', '1', '1', '1', '1', '1'),
+('8', '1', '0', '1', '0', '0'),
+('9', '1', '1', '0', '0', '0'),
+('10', '1', '1', '0', '0', '0'),
+('11', '1', '1', '1', '1', '1'),
+('12', '0', '0', '0', '1', '0'),
+('13', '0', '0', '0', '1', '0'),
+('14', '0', '0', '0', '0', '0'),
+('15', '1', '0', '0', '1', '0'),
+('16', '0', '0', '0', '0', '0'),
+('17', '1', '1', '0', '0', '0'),
+('18', '1', '1', '1', '1', '1'),
+('19', '0', '1', '0', '0', '0'),
+('20', '1', '1', '0', '0', '0'),
+('21', '1', '1', '1', '0', '0');
+
+
+INSERT INTO aplicacion_perfil VALUES 
+('1', '1', '1', '1'),
+('2', '4', '1', '2'),
+('3', '5', '1', '3'),
+('4', '2', '1', '4'),
+('5', '3', '1', '5'),
+('6', '6', '1', '6'),
+('7', '8', '1', '7'),
+('8', '2', '3', '8'),
+('9', '3', '3', '9'),
+('10', '4', '3', '11'),
+('11', '2', '4', '12'),
+('12', '8', '4', '13'),
+('13', '8', '5', '15'),
+('14', '8', '7', '21');
+
+INSERT INTO aplicacion_usuario VALUES 
+('1', '1', '4', '1'),
+('2', '1', '5', '2'),
+('3', '1', '6', '3'),
+('4', '3', '8', '10'),
+('5', '4', '6', '14'),
+('6', '5', '5', '16'),
+('7', '5', '2', '17'),
+('8', '6', '3302', '18'),
+('9', '6', '2', '19'),
+('10', '6', '3', '20');
+
+INSERT	INTO perfil_usuario VALUES
+(1 , 1, 1),
+(2 , 3,	3),
+(4 , 4,	1),
+(5, 5, 5);

@@ -38,7 +38,7 @@ namespace CapaControlador_SGP
         }
         public OdbcDataReader funcConsultaDetallesCUI(string Tabla, string CodPedido)
         {
-            string Consulta = "SELECT * FROM " + Tabla + " Where pk_cui = " + CodPedido + ";";
+            string Consulta = "SELECT * FROM " + Tabla + " Where pk_id_usuario_pasaporte = " + CodPedido + ";";
             return Modelo.funcConsulta(Consulta);
         }
 

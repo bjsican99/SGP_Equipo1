@@ -31,6 +31,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblbbanco = new System.Windows.Forms.Label();
             this.txtEstadoBanco = new System.Windows.Forms.TextBox();
             this.txt_dpi = new System.Windows.Forms.TextBox();
             this.txt_telefono = new System.Windows.Forms.TextBox();
@@ -80,6 +81,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(169)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lblbbanco);
             this.panel1.Controls.Add(this.txtEstadoBanco);
             this.panel1.Controls.Add(this.txt_dpi);
             this.panel1.Controls.Add(this.txt_telefono);
@@ -100,12 +102,22 @@
             this.panel1.Size = new System.Drawing.Size(500, 343);
             this.panel1.TabIndex = 7;
             // 
+            // lblbbanco
+            // 
+            this.lblbbanco.AutoSize = true;
+            this.lblbbanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbbanco.Location = new System.Drawing.Point(364, 107);
+            this.lblbbanco.Name = "lblbbanco";
+            this.lblbbanco.Size = new System.Drawing.Size(0, 20);
+            this.lblbbanco.TabIndex = 14;
+            // 
             // txtEstadoBanco
             // 
-            this.txtEstadoBanco.Location = new System.Drawing.Point(438, 73);
+            this.txtEstadoBanco.Location = new System.Drawing.Point(397, 31);
             this.txtEstadoBanco.Name = "txtEstadoBanco";
             this.txtEstadoBanco.Size = new System.Drawing.Size(46, 20);
             this.txtEstadoBanco.TabIndex = 13;
+            this.txtEstadoBanco.Visible = false;
             // 
             // txt_dpi
             // 
@@ -225,7 +237,7 @@
             // 
             this.btnVerificar.BackColor = System.Drawing.Color.White;
             this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerificar.Location = new System.Drawing.Point(356, 67);
+            this.btnVerificar.Location = new System.Drawing.Point(382, 67);
             this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.Size = new System.Drawing.Size(77, 29);
@@ -298,5 +310,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtEstadoBanco;
+        private System.Windows.Forms.Label lblbbanco;
     }
 }

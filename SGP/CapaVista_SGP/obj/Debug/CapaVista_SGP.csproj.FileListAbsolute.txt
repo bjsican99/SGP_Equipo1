@@ -112,3 +112,5 @@ C:\Users\alecz\Desktop\Proyecto\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVist
 C:\Users\alecz\Desktop\Proyecto\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.dll
 C:\Users\alecz\Desktop\Proyecto\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.pdb
 C:\Users\alecz\Desktop\Proyecto\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.Mantenimientos.frmMantenimientoMotivo.resources
+C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.Mantenimientos.frmMantenimientoMotivo.resources
+C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.Mantenimientos.frmMantenimientoPasaporte.resources

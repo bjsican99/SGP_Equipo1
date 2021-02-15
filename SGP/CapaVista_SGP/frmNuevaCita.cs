@@ -81,7 +81,13 @@ namespace CapaVista_SGP
                 txt_telefono.Enabled = true;
                 txt_dpi.Enabled = true;
                 btnSiguiente.Enabled = true;
+                lblbbanco.Text = "Boleta Valida";
+                txtBoleta.Enabled = false;
             }
+            else {
+                lblbbanco.Text = "Boleta Valida";
+            }
+           
         }
     }
 }
