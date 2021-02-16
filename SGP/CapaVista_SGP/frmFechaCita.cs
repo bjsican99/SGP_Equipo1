@@ -25,20 +25,16 @@ namespace CapaVista_SGP
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
             frmImprimir imprimir = new frmImprimir();
             imprimir.MdiParent = this.MdiParent;
+
             GuardarGlobal();
             guardarcita();
             imprimir.Show();
-
-
-
         }
         private void GuardarGlobal()
         {
@@ -107,11 +103,9 @@ namespace CapaVista_SGP
         {
             dateTimePicker1.Value.ToString(dateTimePicker1.CustomFormat = "yyyy-MM-dd");
             txt_fecha.Text = dateTimePicker1.Value.ToString(dateTimePicker1.CustomFormat = "yyyy-MM-dd");
-            glo.fechag = txt_fecha.Text;
-           
+            glo.fechag = txt_fecha.Text;        
         }
-
-      
+   
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -140,19 +134,15 @@ namespace CapaVista_SGP
 
         private void txt_hora_TextChanged(object sender, EventArgs e)
         {
-            glo.horag = txt_hora.Text;
-        
+            glo.horag = txt_hora.Text;     
         }
 
         private void txt_fecha_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void comboBox1_SelectedIndexChanged_2(object sender, EventArgs e)
         {
-           
-            
         }
     }
 }

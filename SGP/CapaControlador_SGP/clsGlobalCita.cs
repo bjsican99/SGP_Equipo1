@@ -20,11 +20,6 @@ namespace CapaControlador_SGP
         static string motivo_cita;
         static string estado_cita;
 
-
-
-
-
-
         public string estadog
         {
             get { return estado_cita; }

@@ -65,7 +65,7 @@ namespace CapaControlador_SGP
         }
         public OdbcDataReader funcInsertarCita()
         {
-            string Consulta = "INSERT INTO tbl_cita (pk_cita, nombre_solicitante, apellido_solicitante, fk_numero_boleta, fk_id_centro, fecha_cita, hora_cita, fk_id_motivo_cita ,estado_cita) VALUES(" + glo2.nombreg + "," + glo2.apellidog + "," + glo2.boletag + "," + glo2.centrog + ", " + glo2.fechag + "  , " + glo2.horag + " , " + glo2.motivog + ", 1 ); ";
+            string Consulta = "INSERT INTO tbl_cita (nombre_solicitante, apellido_solicitante, fk_numero_boleta, fk_id_centro, fecha_cita, hora_cita, fk_id_motivo_cita ,estado_cita) VALUES('"+ glo2.nombreg + "','" + glo2.apellidog + "'," + glo2.boletag + "," + glo2.centrog + ",'" + glo2.fechag + "','"+glo2.horag+"'," + glo2.motivog + ", 1 ); ";
             //string Consulta = "INSERT INTO tbl_cita(pk_cita, nombre_solicitante, apellido_solicitante, fk_numero_boleta, fk_id_centro, fecha_cita, hora_cita, fk_id_motivo_cita, estado_cita) VALUES('3', 'nombre1', 'apellido1', 123, 1, 2020 - 10 - 10, '08:00:00', 1, 1);";
 
             return Modelo.funcInsertar(Consulta);
