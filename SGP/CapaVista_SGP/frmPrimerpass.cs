@@ -172,5 +172,10 @@ namespace CapaVista_SGP
                 txtURL.Text = "";
             }
         }
+
+        private void txtfechae_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

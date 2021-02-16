@@ -130,5 +130,45 @@ namespace CapaVista_SGP
                 }
             }
         }
+
+        private void cmb_motivo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_estado.Text = "1";
+            if (cmb_motivo.SelectedIndex != -1)
+            {
+                txt_motivo.Text = cmb_centro.SelectedValue.ToString();
+            }
+        }
+
+        private void txt_motivo_TextChanged(object sender, EventArgs e)
+        {
+            if ((txt_motivo.Text != "") && (int.Parse(txt_motivo.Text) > 4))
+            {
+                OdbcDataReader reader = controlador.funcConsultaCombo("pk_id_motivo", "tbl_motivo", "estado", "motivo", txt_motivo.Text);
+                if (reader.Read())
+                {
+                    cmb_motivo.Text = reader.GetString(0);
+                }
+                else
+                {
+                    cmb_motivo.SelectedIndex = -1;
+                }
+            }
+        }
+
+        private void txt_fecha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtp_fecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

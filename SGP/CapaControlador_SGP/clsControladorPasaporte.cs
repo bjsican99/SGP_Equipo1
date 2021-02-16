@@ -13,6 +13,7 @@ namespace CapaControlador_SGP
     {
         clsModeloPasaporte Modelo = new clsModeloPasaporte();
         clsVariableGlobal glo = new clsVariableGlobal();
+        clsGlobalCita glo2 = new clsGlobalCita();
         public DataTable funcObtenerCamposCombobox(string Campo1, string Campo2, string Tabla, string Estado)
         {
             string Comando = string.Format("SELECT " + Campo1 + " ," + Campo2 + " FROM " + Tabla + " WHERE " + Estado + "= 1;");
@@ -62,6 +63,14 @@ namespace CapaControlador_SGP
             string Consulta = "INSERT INTO tbl_pasaporte (pk_id_pasaporte, fk_id_tipo_pasaporte, fk_id_usuario_pasaporte, fecha_emision, fecha_vencimiento, numero_libreta, link_foto, estado) VALUES("+glo.pk_cuig+", 1 , "+glo.pk_cuig+","+ glo.fecha_emisiong +","+ glo.fecha_expiraciong +","+glo.nolibretag+","+glo.urlg+",1); ";
             return Modelo.funcInsertar(Consulta);
         }
+        public OdbcDataReader funcInsertarCita()
+        {
+            string Consulta = "INSERT INTO tbl_cita (nombre_solicitante, apellido_solicitante, fk_numero_boleta, fk_id_centro, fecha_cita, hora_cita, fk_id_motivo_cita ,estado_cita) VALUES('"+ glo2.nombreg + "','" + glo2.apellidog + "'," + glo2.boletag + "," + glo2.centrog + ",'" + glo2.fechag + "','"+glo2.horag+"'," + glo2.motivog + ", 1 ); ";
+            //string Consulta = "INSERT INTO tbl_cita(pk_cita, nombre_solicitante, apellido_solicitante, fk_numero_boleta, fk_id_centro, fecha_cita, hora_cita, fk_id_motivo_cita, estado_cita) VALUES('3', 'nombre1', 'apellido1', 123, 1, 2020 - 10 - 10, '08:00:00', 1, 1);";
+
+            return Modelo.funcInsertar(Consulta);
+        }
+
         public OdbcDataReader funcActualizarPasaporte_perfil()
         {
             string Consulta = "UPDATE  tbl_pasaporte SET fecha_emision = "+glo.fecha_emisiong+", fecha_vencimiento = "+glo.fecha_expiraciong+" where pk_id_pasaporte = " + glo.pk_cuig + ";";
