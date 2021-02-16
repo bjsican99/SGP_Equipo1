@@ -42,11 +42,22 @@ namespace CapaVista_SGP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            GuardarGlobal();
             frmFechaCita fecha = new frmFechaCita();
             fecha.MdiParent = this.MdiParent;
             fecha.Show();
         }
 
+        private void GuardarGlobal() {
+
+            clsGlobalCita Global = new clsGlobalCita();
+            Global.boletag = txtBoleta.Text;
+            Global.nombreg = txt_nombre.Text;
+            Global.apellidog = txt_apellido.Text;
+            Global.telefonog = txt_telefono.Text;
+            Global.dpig = txt_dpi.Text;
+
+        }
         private void VerificarBanco()
         {
             clsControladorPasaporte controlador = new clsControladorPasaporte();
@@ -85,9 +96,19 @@ namespace CapaVista_SGP
                 txtBoleta.Enabled = false;
             }
             else {
-                lblbbanco.Text = "Boleta Valida";
+                lblbbanco.Text = "No Valida";
             }
            
+        }
+
+        private void txt_nombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_citaid_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
