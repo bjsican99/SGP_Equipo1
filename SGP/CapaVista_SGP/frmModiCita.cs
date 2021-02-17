@@ -21,6 +21,7 @@ namespace CapaVista_SGP
         {
             InitializeComponent();
             CargarCombobox();
+            CargarCombobox4();
             rbtn_habilitado.Checked = true;
             UsuarioAplicacion = glo.usuariog;
             navegador1.Usuario = UsuarioAplicacion;
@@ -133,27 +134,12 @@ namespace CapaVista_SGP
 
         private void cmb_motivo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_estado.Text = "1";
-            if (cmb_motivo.SelectedIndex != -1)
-            {
-                txt_motivo.Text = cmb_centro.SelectedValue.ToString();
-            }
+            
         }
 
         private void txt_motivo_TextChanged(object sender, EventArgs e)
         {
-            if ((txt_motivo.Text != "") && (int.Parse(txt_motivo.Text) > 4))
-            {
-                OdbcDataReader reader = controlador.funcConsultaCombo("pk_id_motivo", "tbl_motivo", "estado", "motivo", txt_motivo.Text);
-                if (reader.Read())
-                {
-                    cmb_motivo.Text = reader.GetString(0);
-                }
-                else
-                {
-                    cmb_motivo.SelectedIndex = -1;
-                }
-            }
+            
         }
 
         private void txt_fecha_TextChanged(object sender, EventArgs e)
@@ -168,6 +154,34 @@ namespace CapaVista_SGP
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void dvg_generar_cita_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmModiCita_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_motivo_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            txt_motivo.Text = "1";
+            if (cmb_motivo.SelectedIndex != -1)
+            {
+                txt_motivo.Text = cmb_motivo.SelectedValue.ToString();
+            }
+        }
+        public void CargarCombobox4()
+        {
+            //llenado de combobox de producto
+            cmb_motivo.DisplayMember = "motivo";
+            cmb_motivo.ValueMember = "pk_id_motivo";
+            cmb_motivo.DataSource = controlador.funcObtenerCamposComboboxPas("pk_id_motivo", "motivo", "tbl_motivo", "estado");
+            cmb_motivo.SelectedIndex = -1;
 
         }
     }

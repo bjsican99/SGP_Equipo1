@@ -77,10 +77,5 @@ namespace CapaControlador_SGP
             return Modelo.funcModificar(Consulta);
         }
 
-        /*public OdbcDataReader funcActualizarCita()
-        {
-            string Consulta = "UPDATE tbl_cita SET fecha_hora_cita = " ++ "hora_cita = " ++;
-            return Modelo.funcModificar(Consulta);
-        }*/
     }
 }
