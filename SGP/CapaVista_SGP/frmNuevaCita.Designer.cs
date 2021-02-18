@@ -31,6 +31,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblbbanco = new System.Windows.Forms.Label();
             this.txtEstadoBanco = new System.Windows.Forms.TextBox();
             this.txt_dpi = new System.Windows.Forms.TextBox();
             this.txt_telefono = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.btnVerificar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblbbanco = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -100,6 +100,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(665, 421);
             this.panel1.TabIndex = 7;
+            // 
+            // lblbbanco
+            // 
+            this.lblbbanco.AutoSize = true;
+            this.lblbbanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbbanco.Location = new System.Drawing.Point(526, 141);
+            this.lblbbanco.Name = "lblbbanco";
+            this.lblbbanco.Size = new System.Drawing.Size(67, 20);
+            this.lblbbanco.TabIndex = 14;
+            this.lblbbanco.Text = "Estado";
             // 
             // txtEstadoBanco
             // 
@@ -256,15 +266,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(711, 466);
             this.panel3.TabIndex = 13;
-            // 
-            // lblbbanco
-            // 
-            this.lblbbanco.AutoSize = true;
-            this.lblbbanco.Location = new System.Drawing.Point(543, 141);
-            this.lblbbanco.Name = "lblbbanco";
-            this.lblbbanco.Size = new System.Drawing.Size(46, 17);
-            this.lblbbanco.TabIndex = 14;
-            this.lblbbanco.Text = "label7";
             // 
             // frmNuevaCita
             // 

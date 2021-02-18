@@ -144,5 +144,10 @@ namespace CapaVista_SGP
         private void comboBox1_SelectedIndexChanged_2(object sender, EventArgs e)
         {
         }
+
+        private void comboBox1_SelectedIndexChanged_3(object sender, EventArgs e)
+        {
+ 
+        }
     }
 }
