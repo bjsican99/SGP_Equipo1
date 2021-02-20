@@ -20,6 +20,7 @@ namespace CapaVista_SGP
         private int childFormNumber = 0;
         clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();//instancia para los permisos por aplicacion
         clsVistaBitacora bit = new clsVistaBitacora();//instancia para la bitacora.
+        clsVariableGlobal glo = new clsVariableGlobal();
         public frmPrincipal()
         {
             InitializeComponent();
@@ -123,18 +124,42 @@ namespace CapaVista_SGP
 
         private void citasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            clsVariableGlobal glo = new clsVariableGlobal();
-            glo.usuariog = txtusuario.Text;
-            frmCita Cita = new frmCita();
-            Cita.MdiParent = this;
-            Cita.Show();
+            if (seguridad.PermisosAcceso("304", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso A Proceso Citas", 304);
+                clsVariableGlobal glo = new clsVariableGlobal();
+                glo.usuariog = txtusuario.Text;
+                frmCita Cita = new frmCita();
+                Cita.MdiParent = this;
+                Cita.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de ingresar a Proceso Citas", 304);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }  
+                
         }
 
         private void emisionPasaporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVerificacionDatos verificacionDatos = new frmVerificacionDatos();
-            verificacionDatos.MdiParent = this;
-            verificacionDatos.Show();
+            if (seguridad.PermisosAcceso("308", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso A Proceso Proceso Emision Pasaporte (verificacion datos)", 308);
+                frmVerificacionDatos verificacionDatos = new frmVerificacionDatos();
+                verificacionDatos.MdiParent = this;
+                verificacionDatos.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de ingresar a Proceso Emision Pasaporte (verificacion datos)", 308);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+            
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -143,6 +168,7 @@ namespace CapaVista_SGP
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 txtusuario.Text = frm.usuario();
+                glo.usuariog = txtusuario.Text;
             }
 
         }
@@ -285,10 +311,10 @@ namespace CapaVista_SGP
 
         private void centrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (seguridad.PermisosAcceso("3307", txtusuario.Text) == 1)
+            if (seguridad.PermisosAcceso("301", txtusuario.Text) == 1)
             {
                 bit.user(txtusuario.Text);
-                bit.insert("Ingreso a Mantenimiento Linea De Productos", 5);    
+                bit.insert("Ingreso a Mantenimiento Centros", 301);
                 frmMantenimientoCentro mantenimientoCentro = new frmMantenimientoCentro(txtusuario.Text);
                 mantenimientoCentro.MdiParent = this;
                 mantenimientoCentro.Show();
@@ -296,19 +322,19 @@ namespace CapaVista_SGP
             else
             {
                 bit.user(txtusuario.Text);
-                bit.insert("Trato de Ingresar a Mantenimiento Linea De Productos", 3307);
+                bit.insert("Trato de Ingresar a Mantenimiento Centros", 301);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
 
-            
+
         }
 
         private void tipoPasaporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (seguridad.PermisosAcceso("3307", txtusuario.Text) == 1)
+            if (seguridad.PermisosAcceso("302", txtusuario.Text) == 1)
             {
                 bit.user(txtusuario.Text);
-                bit.insert("Ingreso a Mantenimiento Linea De Productos", 5);
+                bit.insert("Ingreso a Mantenimiento Tipo Pasaporte", 302);
                 frmMantenimientoPasaporte frmMantenimientoPasaporte = new frmMantenimientoPasaporte(txtusuario.Text);
                 frmMantenimientoPasaporte.MdiParent = this;
                 frmMantenimientoPasaporte.Show();
@@ -316,17 +342,17 @@ namespace CapaVista_SGP
             else
             {
                 bit.user(txtusuario.Text);
-                bit.insert("Trato de Ingresar a Mantenimiento Linea De Productos", 3307);
+                bit.insert("Trato de Ingresar a Mantenimiento Tipo Pasaporte", 302);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }
 
         private void motivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (seguridad.PermisosAcceso("3307", txtusuario.Text) == 1)
+            if (seguridad.PermisosAcceso("303", txtusuario.Text) == 1)
             {
                 bit.user(txtusuario.Text);
-                bit.insert("Ingreso a Mantenimiento Linea De Productos", 5);
+                bit.insert("Ingreso a Mantenimiento Motivo de Gestion", 303);
                 frmMantenimientoMotivo mantenimientoMotivo = new frmMantenimientoMotivo(txtusuario.Text);
                 mantenimientoMotivo.MdiParent = this;
                 mantenimientoMotivo.Show();
@@ -334,7 +360,7 @@ namespace CapaVista_SGP
             else
             {
                 bit.user(txtusuario.Text);
-                bit.insert("Trato de Ingresar a Mantenimiento Linea De Productos", 3307);
+                bit.insert("Trato de Ingresar a Mantenimiento Motivo de Gestion", 303);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }

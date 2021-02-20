@@ -41,15 +41,13 @@ namespace CapaVista_SGP
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //llenado de  parametros para la aplicacion 
-            navegador1.aplicacion = 3307;
+            navegador1.aplicacion = 307;
             navegador1.tbl = "tbl_cita";
             navegador1.campoEstado = "estado_cita";
 
             //se agregan los componentes del formulario a la lista tipo control
-
             foreach (Control C in this.Controls)
             {
-
                 if (C.Tag != null)
                 {
                     if (C.Tag.ToString() == "saltar")
@@ -61,25 +59,18 @@ namespace CapaVista_SGP
                         if (C is TextBox)
                         {
                             lista.Add(C);
-
                         }
                         else if (C is ComboBox)
                         {
                             lista.Add(C);
-
                         }
                         else if (C is DateTimePicker)
                         {
                             lista.Add(C);
-
                         }
                     }
-
                 }
-
-
             }
-
             navegador1.control = lista;
             navegador1.formulario = this;
             navegador1.DatosActualizar = dvg_generar_cita;
@@ -95,7 +86,7 @@ namespace CapaVista_SGP
         {
             if (rbtn_habilitado.Checked == true)
             {
-                txt_estado.Text = "1";
+                txtEstado.Text = "1";
             }
         }
 
@@ -103,24 +94,24 @@ namespace CapaVista_SGP
         {
             if (rbtn_deshabilitado.Checked == true)
             {
-                txt_estado.Text = "0";
+                txtEstado.Text = "0";
             }
         }
 
         private void cmb_centro_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_estado.Text = "1";
+            txtEstado.Text = "1";
             if (cmb_centro.SelectedIndex != -1)
             {
-                txt_centro.Text = cmb_centro.SelectedValue.ToString();
+                txtCentro.Text = cmb_centro.SelectedValue.ToString();
             }
         }
 
         private void txt_centro_TextChanged(object sender, EventArgs e)
         {
-            if ((txt_centro.Text != "") && (int.Parse(txt_centro.Text) > 4))
+            if ((txtCentro.Text != "") && (int.Parse(txtCentro.Text) > 4))
             {
-                OdbcDataReader reader = controlador.funcConsultaCombo("pk_id_centro", "tbl_centro", "estado", "nombre_centro", txt_centro.Text);
+                OdbcDataReader reader = controlador.funcConsultaCombo("pk_id_centro", "tbl_centro", "estado", "nombre_centro", txtCentro.Text);
                 if (reader.Read())
                 {
                     cmb_centro.Text = reader.GetString(0);
@@ -130,11 +121,6 @@ namespace CapaVista_SGP
                     cmb_centro.SelectedIndex = -1;
                 }
             }
-        }
-
-        private void cmb_motivo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void txt_motivo_TextChanged(object sender, EventArgs e)
@@ -152,11 +138,6 @@ namespace CapaVista_SGP
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dvg_generar_cita_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -169,10 +150,10 @@ namespace CapaVista_SGP
 
         private void cmb_motivo_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            txt_motivo.Text = "1";
+            txtMotivo.Text = "1";
             if (cmb_motivo.SelectedIndex != -1)
             {
-                txt_motivo.Text = cmb_motivo.SelectedValue.ToString();
+                txtMotivo.Text = cmb_motivo.SelectedValue.ToString();
             }
         }
         public void CargarCombobox4()
@@ -182,7 +163,6 @@ namespace CapaVista_SGP
             cmb_motivo.ValueMember = "pk_id_motivo";
             cmb_motivo.DataSource = controlador.funcObtenerCamposComboboxPas("pk_id_motivo", "motivo", "tbl_motivo", "estado");
             cmb_motivo.SelectedIndex = -1;
-
         }
     }
 }

@@ -30,8 +30,8 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnVerificar = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,8 +55,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(169)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnSalir);
+            this.panel1.Controls.Add(this.btnModificar);
+            this.panel1.Controls.Add(this.btnVerificar);
             this.panel1.Controls.Add(this.btnIngresar);
             this.panel1.Location = new System.Drawing.Point(16, 17);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -64,31 +64,31 @@
             this.panel1.Size = new System.Drawing.Size(500, 236);
             this.panel1.TabIndex = 7;
             // 
-            // button1
+            // btnModificar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(339, 76);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 59);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnModificar.BackColor = System.Drawing.Color.White;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(339, 76);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(116, 59);
+            this.btnModificar.TabIndex = 2;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnSalir
+            // btnVerificar
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.White;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(188, 76);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(116, 59);
-            this.btnSalir.TabIndex = 1;
-            this.btnSalir.Text = "Verificar";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnVerificar.BackColor = System.Drawing.Color.White;
+            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificar.Location = new System.Drawing.Point(188, 76);
+            this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(116, 59);
+            this.btnVerificar.TabIndex = 1;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = false;
+            this.btnVerificar.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnIngresar
             // 
@@ -152,10 +152,10 @@
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

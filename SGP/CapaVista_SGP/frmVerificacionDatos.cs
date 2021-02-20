@@ -1,4 +1,5 @@
 ﻿using CapaControlador_SGP;
+using CapaVistaSeguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace CapaVista_SGP
 {
     public partial class frmVerificacionDatos : Form
     {
+        clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();//instancia para los permisos por aplicacion
+        clsVistaBitacora bit = new clsVistaBitacora();//instancia para la bitacora.
         clsControladorPasaporte controlador = new clsControladorPasaporte();
         clsVariableGlobal glo = new clsVariableGlobal();
         public frmVerificacionDatos()
@@ -23,18 +26,35 @@ namespace CapaVista_SGP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmPrimerpass frmPrimerpass = new frmPrimerpass();
-            frmPrimerpass.MdiParent = this.MdiParent;
-            frmPrimerpass.Show();
+            Console.Write("El usuario es:" + glo.usuariog);
+            if (seguridad.PermisosAcceso("308", glo.usuariog) == 1)
+            {
+                bit.user(glo.usuariog);
+                bit.insert("Ingreso a Verificacion de Datos", 308);
+                frmPrimerpass frmPrimerpass = new frmPrimerpass();
+                frmPrimerpass.MdiParent = this.MdiParent;
+                frmPrimerpass.Show();
+            }
+            else
+            {
+                bit.user(glo.usuariog);
+                bit.insert("Trato de Ingresar a Verificacion de Datos", 308);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+                
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            bit.user(glo.usuariog);
+            bit.insert("Salio de Verificacion De Datos.", 308);
             this.Close();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            bit.user(glo.usuariog);
+            bit.insert("Verifico CUI", 308);
             CargarDetalles();
         }
 
@@ -85,6 +105,8 @@ namespace CapaVista_SGP
 
         private void btnBoleto_Click(object sender, EventArgs e)
         {
+            bit.user(glo.usuariog);
+            bit.insert("Verifico Boleto de ornato", 308);
             boleto();
         }
         private void boleto()

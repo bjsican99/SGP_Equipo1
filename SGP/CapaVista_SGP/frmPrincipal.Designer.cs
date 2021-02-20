@@ -62,6 +62,7 @@ namespace CapaVista_SGP
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.txtusuario = new System.Windows.Forms.TextBox();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +76,8 @@ namespace CapaVista_SGP
             this.mantenimientosToolStripMenuItem,
             this.procesoToolStripMenuItem,
             this.toolsMenu,
-            this.helpMenu});
+            this.helpMenu,
+            this.reportesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -123,21 +125,21 @@ namespace CapaVista_SGP
             // centrosToolStripMenuItem
             // 
             this.centrosToolStripMenuItem.Name = "centrosToolStripMenuItem";
-            this.centrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.centrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.centrosToolStripMenuItem.Text = "Centros";
             this.centrosToolStripMenuItem.Click += new System.EventHandler(this.centrosToolStripMenuItem_Click);
             // 
             // tipoPasaporteToolStripMenuItem
             // 
             this.tipoPasaporteToolStripMenuItem.Name = "tipoPasaporteToolStripMenuItem";
-            this.tipoPasaporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoPasaporteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tipoPasaporteToolStripMenuItem.Text = "Tipo Pasaporte";
             this.tipoPasaporteToolStripMenuItem.Click += new System.EventHandler(this.tipoPasaporteToolStripMenuItem_Click);
             // 
             // motivoToolStripMenuItem
             // 
             this.motivoToolStripMenuItem.Name = "motivoToolStripMenuItem";
-            this.motivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motivoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.motivoToolStripMenuItem.Text = "Motivo";
             this.motivoToolStripMenuItem.Click += new System.EventHandler(this.motivoToolStripMenuItem_Click);
             // 
@@ -321,6 +323,13 @@ namespace CapaVista_SGP
             this.txtusuario.Size = new System.Drawing.Size(100, 20);
             this.txtusuario.TabIndex = 4;
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,6 +391,7 @@ namespace CapaVista_SGP
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem motivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
     }
 }
 

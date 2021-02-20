@@ -26,7 +26,7 @@ namespace CapaVista_SGP.Mantenimientos
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //llenado de  parametros para la aplicacion 
-            navegador1.aplicacion = 3307;
+            navegador1.aplicacion = 303;
             navegador1.tbl = "tbl_motivo";
             navegador1.campoEstado = "estado";
 

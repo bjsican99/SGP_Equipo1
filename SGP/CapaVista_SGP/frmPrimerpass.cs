@@ -1,4 +1,5 @@
 ﻿using CapaControlador_SGP;
+using CapaVistaSeguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace CapaVista_SGP
     {
         clsVariableGlobal glo = new clsVariableGlobal();
         clsControladorPasaporte controlador = new clsControladorPasaporte();
+        clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();//instancia para los permisos por aplicacion
+        clsVistaBitacora bit = new clsVistaBitacora();//instancia para la bitacora.
         public frmPrimerpass()
         {
             InitializeComponent();
@@ -29,7 +32,6 @@ namespace CapaVista_SGP
             cmbtipo.ValueMember = "pk_id_tipo_pasaporte";
             cmbtipo.DataSource = controlador.funcObtenerCamposComboboxPas("pk_id_tipo_pasaporte", "nombre_pasaporte", "tbl_tipo_pasaporte", "estado");
             cmbtipo.SelectedIndex = -1;
-
         }
 
         private void cargar_dpi()
@@ -40,32 +42,26 @@ namespace CapaVista_SGP
             txtnacionalidad.Text = glo.nacionalidadg;
             txtnombre.Text = glo.nombreg;
             txtnopasaporte.Text = glo.pk_cuig;
-            txtsexo.Text = glo.sexog;
-        
+            txtsexo.Text = glo.sexog;       
         }
 
         private void label12_Click(object sender, EventArgs e)
         {
-
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label13_Click(object sender, EventArgs e)
         {
-
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-
         }
         private void guardarglobal()
-        {
-          
+        {         
             glo.tipog = cmbtipo.Text;
             glo.autoridadg = txtautoridad.Text;
             glo.nolibretag = txtlibreta.Text;
@@ -81,22 +77,33 @@ namespace CapaVista_SGP
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            guardarglobal();
-
-            if (rbtNuevo.Checked == true)
+            if (seguridad.PermisosAcceso("310", glo.usuariog) == 1)
             {
-                guardarpasaportedb();
+                guardarglobal();
+                if (rbtNuevo.Checked == true)
+                {
+                    guardarpasaportedb();
+                }
+                if (rbtRenovacion.Checked == true)
+                {
+                    actualizarpasaportedb();
+                }
+                bit.user(glo.usuariog);
+                bit.insert("Ingreso a Impresion de Pasaporte", 310);
+                frmImpresionPasaporte impresionPasaporte = new frmImpresionPasaporte();
+                impresionPasaporte.MdiParent = this.MdiParent;
+                impresionPasaporte.Show();
             }
-            if (rbtRenovacion.Checked == true)
+            else
             {
-                actualizarpasaportedb();
+                bit.user(glo.usuariog);
+                bit.insert("Trato de Ingresar a impresion de pasaporte", 310);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
 
-
-            frmImpresionPasaporte impresionPasaporte = new frmImpresionPasaporte();
-            impresionPasaporte.MdiParent = this.MdiParent;
-            impresionPasaporte.Show();
         }
+
+        
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -105,19 +112,16 @@ namespace CapaVista_SGP
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dateTimePicker1.Value.ToString(dateTimePicker1.CustomFormat = "yyyy-MM-dd");
             txtfechae.Text = dateTimePicker1.Value.ToString(dateTimePicker1.CustomFormat = "yyyy-MM-dd");
-
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
@@ -128,25 +132,19 @@ namespace CapaVista_SGP
             glo.fecha_expiraciong = txtfechafinal.Text;
             Console.WriteLine(glo.fecha_expiraciong);
             Console.WriteLine(glo.fecha_emisiong);
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void txtfechafinal_TextChanged(object sender, EventArgs e)
         {
-
         }
-
-  
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -175,7 +173,6 @@ namespace CapaVista_SGP
 
         private void txtfechae_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
