@@ -32,15 +32,13 @@ namespace CapaVista_SGP.Mantenimientos
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //llenado de  parametros para la aplicacion 
-            navegador1.aplicacion = 3307;
+            navegador1.aplicacion = 301;
             navegador1.tbl = "tbl_centro";
             navegador1.campoEstado = "estado";
 
             //se agregan los componentes del formulario a la lista tipo control
-
             foreach (Control C in this.Controls)
             {
-
                 if (C.Tag != null)
                 {
                     if (C.Tag.ToString() == "saltar")
@@ -52,23 +50,17 @@ namespace CapaVista_SGP.Mantenimientos
                         if (C is TextBox)
                         {
                             lista.Add(C);
-
                         }
                         else if (C is ComboBox)
                         {
                             lista.Add(C);
-
                         }
                         else if (C is DateTimePicker)
                         {
                             lista.Add(C);
-
                         }
                     }
-
                 }
-
-
             }
 
             navegador1.control = lista;
