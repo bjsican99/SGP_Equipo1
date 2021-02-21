@@ -89,7 +89,7 @@ namespace CapaVista_SGP
                     actualizarpasaportedb();
                 }
                 bit.user(glo.usuariog);
-                bit.insert("Ingreso a Impresion de Pasaporte", 310);
+                bit.insert("Imprimio pasaporte No."+txtcui.Text, 310);
                 frmImpresionPasaporte impresionPasaporte = new frmImpresionPasaporte();
                 impresionPasaporte.MdiParent = this.MdiParent;
                 impresionPasaporte.Show();
@@ -130,8 +130,6 @@ namespace CapaVista_SGP
             txtfechafinal.Text = dateTimePicker2.Value.ToString(dateTimePicker2.CustomFormat = "yyyy-MM-dd");
             glo.fecha_emisiong = txtfechae.Text;
             glo.fecha_expiraciong = txtfechafinal.Text;
-            Console.WriteLine(glo.fecha_expiraciong);
-            Console.WriteLine(glo.fecha_emisiong);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -173,6 +171,53 @@ namespace CapaVista_SGP
 
         private void txtfechae_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void rbtRenovacion_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void rbtNuevo_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void frmPrimerpass_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void txtlibreta_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btnVerificar_Click(object sender, EventArgs e)
+        {
+            int a, b;
+            if (txtautoridad.Text != "" && txtlibreta.Text != "" && txtfechafinal.Text != "" && txtfechae.Text != "" && cmbtipo.SelectedItem != null)
+            {
+                a = 1;
+            }
+            else
+            {
+                MessageBox.Show("Verificar Datos");
+                a = 0;
+            }
+            if (rbtNuevo.Checked == true || rbtRenovacion.Checked == true)
+            {
+                b = 1;
+            }
+            else 
+            {
+                MessageBox.Show("Seleccione el tipo de tramite");
+                b = 0;
+            }
+            if (a == 1 && b == 1)
+            {
+                btnSiguiente.Enabled = true;
+            }
+            else {
+                btnSiguiente.Enabled = false;
+            }
         }
     }
 }

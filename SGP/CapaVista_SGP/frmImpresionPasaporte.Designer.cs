@@ -56,9 +56,9 @@ namespace CapaVista_SGP
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(32, 345);
+            this.btnPrint.Location = new System.Drawing.Point(56, 361);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(166, 90);
+            this.btnPrint.Size = new System.Drawing.Size(90, 41);
             this.btnPrint.TabIndex = 0;
             this.btnPrint.Text = "IMPRIMIR";
             this.btnPrint.UseVisualStyleBackColor = true;

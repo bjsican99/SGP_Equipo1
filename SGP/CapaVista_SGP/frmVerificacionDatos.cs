@@ -30,7 +30,7 @@ namespace CapaVista_SGP
             if (seguridad.PermisosAcceso("308", glo.usuariog) == 1)
             {
                 bit.user(glo.usuariog);
-                bit.insert("Ingreso a Verificacion de Datos", 308);
+                bit.insert("Verifico datos de Datos CUI# "+txtCUI.Text, 308);
                 frmPrimerpass frmPrimerpass = new frmPrimerpass();
                 frmPrimerpass.MdiParent = this.MdiParent;
                 frmPrimerpass.Show();
@@ -56,6 +56,10 @@ namespace CapaVista_SGP
             bit.user(glo.usuariog);
             bit.insert("Verifico CUI", 308);
             CargarDetalles();
+            if (dgvCUI.Rows.Count > 1)
+            {
+                cbDPI.Enabled = true;
+            }
         }
 
         public void CargarDetalles()
@@ -123,10 +127,16 @@ namespace CapaVista_SGP
                         if (txtEstadoBoleto.Text == "1")
                         {
                             panelBoleta.BackColor = Color.Lime;
+                            bit.user(glo.usuariog);
+                            bit.insert("Boleto No."+ txtBoleto.Text+" VALIDO para "+txtBoleto.Text, 308);
+                            btnAceptar.Enabled = true;
+                            txtBoleto.Enabled = false;
                         }
                         if (txtEstadoBoleto.Text == "0")
                         {
                             panelBoleta.BackColor = Color.Red;
+                            bit.user(glo.usuariog);
+                            bit.insert("Boleto No." + txtBoleto.Text + " NO VALIDO para " + txtBoleto.Text, 308);
                         }
                     }
                 }
@@ -135,12 +145,31 @@ namespace CapaVista_SGP
                     Console.WriteLine(err.Message);
                 }
             }
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbDPI.Checked == true)
+            {
+                btnBoleto.Enabled = true;
+            }
+        }
+
+        private void panelBoleta_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void btnEliminarDPI_Click(object sender, EventArgs e)
+        {
+            txtCUI.Text = "";
+            dgvCUI.Rows.Clear();
+            cbDPI.Checked = false;
+            cbDPI.Enabled = false;
         }
     }
 }

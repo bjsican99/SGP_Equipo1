@@ -60,7 +60,7 @@ namespace CapaControlador_SGP
         }
         public OdbcDataReader funcInsertarPasaporte()
         {
-            string Consulta = "INSERT INTO tbl_pasaporte (pk_id_pasaporte, fk_id_tipo_pasaporte, fk_id_usuario_pasaporte, fecha_emision, fecha_vencimiento, numero_libreta, link_foto, estado) VALUES("+glo.pk_cuig+", 1 , "+glo.pk_cuig+","+ glo.fecha_emisiong +","+ glo.fecha_expiraciong +","+glo.nolibretag+","+glo.urlg+",1); ";
+            string Consulta = "INSERT INTO tbl_pasaporte (pk_id_pasaporte, fk_id_tipo_pasaporte, fk_id_usuario_pasaporte, fecha_emision, fecha_vencimiento, numero_libreta, link_foto, link_cod_barras, link_cod_ocr, estado) VALUES("+glo.pk_cuig+", 1 , "+glo.pk_cuig+",'"+ glo.fecha_emisiong +"','" + glo.fecha_expiraciong + "',123,'" + glo.urlg + "','" + glo.urlg + "','" + glo.urlg + "',1); ";
             return Modelo.funcInsertar(Consulta);
         }
         public OdbcDataReader funcInsertarCita()
@@ -73,7 +73,7 @@ namespace CapaControlador_SGP
 
         public OdbcDataReader funcActualizarPasaporte_perfil()
         {
-            string Consulta = "UPDATE  tbl_pasaporte SET fecha_emision = "+glo.fecha_emisiong+", fecha_vencimiento = "+glo.fecha_expiraciong+" where pk_id_pasaporte = " + glo.pk_cuig + ";";
+            string Consulta = "UPDATE  tbl_pasaporte SET fecha_emision = '"+glo.fecha_emisiong+"', fecha_vencimiento = '"+glo.fecha_expiraciong+"' where pk_id_pasaporte = " + glo.pk_cuig + ";";
             return Modelo.funcModificar(Consulta);
         }
 

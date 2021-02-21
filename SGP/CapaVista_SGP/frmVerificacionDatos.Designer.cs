@@ -30,8 +30,10 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEliminarDPI = new System.Windows.Forms.Button();
+            this.cbDPI = new System.Windows.Forms.CheckBox();
             this.txtEstadoBoleto = new System.Windows.Forms.TextBox();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnVerificar = new System.Windows.Forms.Button();
             this.btnBoleto = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -71,15 +73,17 @@
             this.panel3.Location = new System.Drawing.Point(34, 60);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(698, 422);
+            this.panel3.Size = new System.Drawing.Size(738, 492);
             this.panel3.TabIndex = 15;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(169)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnEliminarDPI);
+            this.panel1.Controls.Add(this.cbDPI);
             this.panel1.Controls.Add(this.txtEstadoBoleto);
-            this.panel1.Controls.Add(this.btnModificar);
+            this.panel1.Controls.Add(this.btnVerificar);
             this.panel1.Controls.Add(this.btnBoleto);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnAceptar);
@@ -90,40 +94,67 @@
             this.panel1.Controls.Add(this.dgvCUI);
             this.panel1.Controls.Add(this.txtCUI);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(16, 17);
+            this.panel1.Location = new System.Drawing.Point(14, 17);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(656, 385);
+            this.panel1.Size = new System.Drawing.Size(704, 455);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnEliminarDPI
+            // 
+            this.btnEliminarDPI.BackColor = System.Drawing.Color.White;
+            this.btnEliminarDPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarDPI.Location = new System.Drawing.Point(518, 18);
+            this.btnEliminarDPI.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarDPI.Name = "btnEliminarDPI";
+            this.btnEliminarDPI.Size = new System.Drawing.Size(100, 32);
+            this.btnEliminarDPI.TabIndex = 26;
+            this.btnEliminarDPI.Text = "Eliminar";
+            this.btnEliminarDPI.UseVisualStyleBackColor = false;
+            this.btnEliminarDPI.Click += new System.EventHandler(this.btnEliminarDPI_Click);
+            // 
+            // cbDPI
+            // 
+            this.cbDPI.AutoSize = true;
+            this.cbDPI.Enabled = false;
+            this.cbDPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDPI.Location = new System.Drawing.Point(219, 283);
+            this.cbDPI.Name = "cbDPI";
+            this.cbDPI.Size = new System.Drawing.Size(263, 33);
+            this.cbDPI.TabIndex = 25;
+            this.cbDPI.Text = "Datos DPI VALIDOS";
+            this.cbDPI.UseVisualStyleBackColor = true;
+            this.cbDPI.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtEstadoBoleto
             // 
             this.txtEstadoBoleto.Enabled = false;
-            this.txtEstadoBoleto.Location = new System.Drawing.Point(488, 292);
+            this.txtEstadoBoleto.Location = new System.Drawing.Point(477, 341);
             this.txtEstadoBoleto.Name = "txtEstadoBoleto";
             this.txtEstadoBoleto.Size = new System.Drawing.Size(16, 20);
             this.txtEstadoBoleto.TabIndex = 23;
             this.txtEstadoBoleto.Visible = false;
             // 
-            // btnModificar
+            // btnVerificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.White;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(443, 18);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(100, 32);
-            this.btnModificar.TabIndex = 22;
-            this.btnModificar.Text = "Verificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnVerificar.BackColor = System.Drawing.Color.White;
+            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificar.Location = new System.Drawing.Point(393, 18);
+            this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(100, 32);
+            this.btnVerificar.TabIndex = 22;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = false;
+            this.btnVerificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnBoleto
             // 
             this.btnBoleto.BackColor = System.Drawing.Color.White;
+            this.btnBoleto.Enabled = false;
             this.btnBoleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBoleto.Location = new System.Drawing.Point(517, 280);
+            this.btnBoleto.Location = new System.Drawing.Point(486, 341);
             this.btnBoleto.Margin = new System.Windows.Forms.Padding(2);
             this.btnBoleto.Name = "btnBoleto";
             this.btnBoleto.Size = new System.Drawing.Size(100, 32);
@@ -136,7 +167,7 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.White;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(517, 327);
+            this.btnSalir.Location = new System.Drawing.Point(590, 380);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 32);
@@ -148,8 +179,9 @@
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
+            this.btnAceptar.Enabled = false;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(404, 327);
+            this.btnAceptar.Location = new System.Drawing.Point(486, 380);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(100, 32);
@@ -161,18 +193,19 @@
             // panelBoleta
             // 
             this.panelBoleta.BackColor = System.Drawing.Color.Red;
-            this.panelBoleta.Location = new System.Drawing.Point(230, 332);
+            this.panelBoleta.Location = new System.Drawing.Point(293, 380);
             this.panelBoleta.Margin = new System.Windows.Forms.Padding(2);
             this.panelBoleta.Name = "panelBoleta";
-            this.panelBoleta.Size = new System.Drawing.Size(130, 23);
+            this.panelBoleta.Size = new System.Drawing.Size(159, 23);
             this.panelBoleta.TabIndex = 18;
+            this.panelBoleta.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBoleta_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
-            this.label3.Location = new System.Drawing.Point(38, 323);
+            this.label3.Location = new System.Drawing.Point(27, 372);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(183, 31);
@@ -181,7 +214,7 @@
             // 
             // txtBoleto
             // 
-            this.txtBoleto.Location = new System.Drawing.Point(304, 292);
+            this.txtBoleto.Location = new System.Drawing.Point(293, 341);
             this.txtBoleto.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoleto.Name = "txtBoleto";
             this.txtBoleto.Size = new System.Drawing.Size(159, 20);
@@ -192,7 +225,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
-            this.label2.Location = new System.Drawing.Point(38, 280);
+            this.label2.Location = new System.Drawing.Point(27, 329);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 31);
@@ -216,12 +249,12 @@
             this.Column10,
             this.Column11,
             this.Column12});
-            this.dgvCUI.Location = new System.Drawing.Point(33, 67);
+            this.dgvCUI.Location = new System.Drawing.Point(9, 69);
             this.dgvCUI.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCUI.Name = "dgvCUI";
             this.dgvCUI.RowHeadersWidth = 51;
             this.dgvCUI.RowTemplate.Height = 24;
-            this.dgvCUI.Size = new System.Drawing.Size(592, 199);
+            this.dgvCUI.Size = new System.Drawing.Size(681, 199);
             this.dgvCUI.TabIndex = 14;
             this.dgvCUI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCUI_CellContentClick);
             // 
@@ -303,7 +336,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
-            this.label7.Location = new System.Drawing.Point(96, 15);
+            this.label7.Location = new System.Drawing.Point(101, 19);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 31);
@@ -319,7 +352,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(758, 45);
+            this.panel2.Size = new System.Drawing.Size(799, 45);
             this.panel2.TabIndex = 14;
             // 
             // label1
@@ -339,10 +372,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(175)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(758, 500);
+            this.ClientSize = new System.Drawing.Size(799, 554);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmVerificacionDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerificacionDatos";
@@ -364,7 +399,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.Button btnBoleto;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAceptar;
@@ -388,5 +423,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.TextBox txtEstadoBoleto;
+        private System.Windows.Forms.CheckBox cbDPI;
+        private System.Windows.Forms.Button btnEliminarDPI;
     }
 }
