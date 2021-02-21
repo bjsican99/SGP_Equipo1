@@ -65,6 +65,7 @@ namespace CapaVista_SGP
         Bitmap memoryImage;
         private void CaptureScreen()
         {
+            btnPrint.Visible = false;
             Graphics myGraphics = this.CreateGraphics();
             Size s = this.Size;
             memoryImage = new Bitmap(s.Width, s.Height, myGraphics);

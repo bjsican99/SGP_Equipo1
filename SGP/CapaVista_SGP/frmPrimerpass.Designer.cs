@@ -64,10 +64,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
-            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnVerificar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -84,7 +85,7 @@
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Location = new System.Drawing.Point(9, 67);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(859, 608);
             this.panel3.TabIndex = 15;
@@ -96,13 +97,15 @@
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(177, 20);
             this.txtURL.TabIndex = 17;
+            this.txtURL.Text = "URL";
+            this.txtURL.Visible = false;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(15, 273);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 32);
             this.button2.TabIndex = 15;
@@ -115,7 +118,7 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(160, 273);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 32);
             this.button1.TabIndex = 14;
@@ -127,7 +130,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(53, 67);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 169);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -138,6 +141,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(169)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnVerificar);
             this.panel1.Controls.Add(this.rbtNuevo);
             this.panel1.Controls.Add(this.rbtRenovacion);
             this.panel1.Controls.Add(this.txtfechafinal);
@@ -167,9 +171,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnSiguiente);
-            this.panel1.Controls.Add(this.btnIngresar);
+            this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Location = new System.Drawing.Point(268, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(571, 573);
             this.panel1.TabIndex = 7;
@@ -187,6 +191,7 @@
             this.rbtNuevo.TabStop = true;
             this.rbtNuevo.Text = "Nuevo";
             this.rbtNuevo.UseVisualStyleBackColor = true;
+            this.rbtNuevo.CheckedChanged += new System.EventHandler(this.rbtNuevo_CheckedChanged);
             // 
             // rbtRenovacion
             // 
@@ -200,6 +205,7 @@
             this.rbtRenovacion.TabStop = true;
             this.rbtRenovacion.Text = "Renovacion";
             this.rbtRenovacion.UseVisualStyleBackColor = true;
+            this.rbtRenovacion.CheckedChanged += new System.EventHandler(this.rbtRenovacion_CheckedChanged);
             // 
             // txtfechafinal
             // 
@@ -208,6 +214,7 @@
             this.txtfechafinal.Name = "txtfechafinal";
             this.txtfechafinal.Size = new System.Drawing.Size(100, 20);
             this.txtfechafinal.TabIndex = 33;
+            this.txtfechafinal.Visible = false;
             this.txtfechafinal.TextChanged += new System.EventHandler(this.txtfechafinal_TextChanged);
             // 
             // txtfechae
@@ -217,6 +224,7 @@
             this.txtfechae.Name = "txtfechae";
             this.txtfechae.Size = new System.Drawing.Size(100, 20);
             this.txtfechae.TabIndex = 32;
+            this.txtfechae.Visible = false;
             this.txtfechae.TextChanged += new System.EventHandler(this.txtfechae_TextChanged);
             // 
             // txtsexo
@@ -230,10 +238,10 @@
             // txtautoridad
             // 
             this.txtautoridad.Location = new System.Drawing.Point(204, 470);
-            this.txtautoridad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtautoridad.Margin = new System.Windows.Forms.Padding(2);
             this.txtautoridad.Name = "txtautoridad";
             this.txtautoridad.Size = new System.Drawing.Size(155, 20);
-            this.txtautoridad.TabIndex = 30;
+            this.txtautoridad.TabIndex = 50;
             // 
             // label14
             // 
@@ -251,7 +259,7 @@
             // 
             this.txtfechaN.Enabled = false;
             this.txtfechaN.Location = new System.Drawing.Point(206, 291);
-            this.txtfechaN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtfechaN.Margin = new System.Windows.Forms.Padding(2);
             this.txtfechaN.Name = "txtfechaN";
             this.txtfechaN.Size = new System.Drawing.Size(153, 20);
             this.txtfechaN.TabIndex = 26;
@@ -274,7 +282,7 @@
             // 
             this.txtnopasaporte.Enabled = false;
             this.txtnopasaporte.Location = new System.Drawing.Point(204, 65);
-            this.txtnopasaporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnopasaporte.Margin = new System.Windows.Forms.Padding(2);
             this.txtnopasaporte.Name = "txtnopasaporte";
             this.txtnopasaporte.Size = new System.Drawing.Size(155, 20);
             this.txtnopasaporte.TabIndex = 24;
@@ -282,7 +290,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(204, 427);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(155, 20);
             this.dateTimePicker2.TabIndex = 23;
@@ -303,7 +311,8 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(204, 387);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.MinDate = new System.DateTime(2021, 2, 21, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(155, 20);
             this.dateTimePicker1.TabIndex = 21;
@@ -324,10 +333,11 @@
             // txtlibreta
             // 
             this.txtlibreta.Location = new System.Drawing.Point(204, 514);
-            this.txtlibreta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtlibreta.Margin = new System.Windows.Forms.Padding(2);
             this.txtlibreta.Name = "txtlibreta";
             this.txtlibreta.Size = new System.Drawing.Size(155, 20);
-            this.txtlibreta.TabIndex = 19;
+            this.txtlibreta.TabIndex = 51;
+            this.txtlibreta.TextChanged += new System.EventHandler(this.txtlibreta_TextChanged);
             // 
             // label9
             // 
@@ -357,7 +367,7 @@
             // 
             this.txtcui.Enabled = false;
             this.txtcui.Location = new System.Drawing.Point(204, 236);
-            this.txtcui.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcui.Margin = new System.Windows.Forms.Padding(2);
             this.txtcui.Name = "txtcui";
             this.txtcui.Size = new System.Drawing.Size(155, 20);
             this.txtcui.TabIndex = 15;
@@ -366,7 +376,7 @@
             // 
             this.txtnacionalidad.Enabled = false;
             this.txtnacionalidad.Location = new System.Drawing.Point(204, 198);
-            this.txtnacionalidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnacionalidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtnacionalidad.Name = "txtnacionalidad";
             this.txtnacionalidad.Size = new System.Drawing.Size(155, 20);
             this.txtnacionalidad.TabIndex = 14;
@@ -375,7 +385,7 @@
             // 
             this.txtapellido.Enabled = false;
             this.txtapellido.Location = new System.Drawing.Point(204, 151);
-            this.txtapellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtapellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(155, 20);
             this.txtapellido.TabIndex = 13;
@@ -384,7 +394,7 @@
             // 
             this.txtnombre.Enabled = false;
             this.txtnombre.Location = new System.Drawing.Point(204, 107);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(155, 20);
             this.txtnombre.TabIndex = 12;
@@ -405,10 +415,10 @@
             // 
             this.cmbtipo.FormattingEnabled = true;
             this.cmbtipo.Location = new System.Drawing.Point(204, 23);
-            this.cmbtipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbtipo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbtipo.Name = "cmbtipo";
             this.cmbtipo.Size = new System.Drawing.Size(155, 21);
-            this.cmbtipo.TabIndex = 9;
+            this.cmbtipo.TabIndex = 49;
             this.cmbtipo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
@@ -474,28 +484,29 @@
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.White;
+            this.btnSiguiente.Enabled = false;
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.Location = new System.Drawing.Point(476, 525);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(88, 32);
-            this.btnSiguiente.TabIndex = 2;
+            this.btnSiguiente.TabIndex = 52;
             this.btnSiguiente.Text = "Siguiente ";
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnIngresar
+            // btnCerrar
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.White;
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(384, 525);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(88, 32);
-            this.btnIngresar.TabIndex = 0;
-            this.btnIngresar.Text = "Cerrar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnCerrar.BackColor = System.Drawing.Color.White;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(384, 525);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(88, 32);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // panel2
             // 
@@ -504,7 +515,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(879, 45);
             this.panel2.TabIndex = 14;
@@ -528,18 +539,32 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // btnVerificar
+            // 
+            this.btnVerificar.BackColor = System.Drawing.Color.White;
+            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificar.Location = new System.Drawing.Point(384, 480);
+            this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(88, 32);
+            this.btnVerificar.TabIndex = 53;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = false;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
+            // 
             // frmPrimerpass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(175)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(879, 686);
+            this.ClientSize = new System.Drawing.Size(879, 688);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPrimerpass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrimerpass";
+            this.Load += new System.EventHandler(this.frmPrimerpass_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -561,7 +586,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
@@ -592,5 +617,6 @@
         private System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.RadioButton rbtNuevo;
         private System.Windows.Forms.RadioButton rbtRenovacion;
+        private System.Windows.Forms.Button btnVerificar;
     }
 }
