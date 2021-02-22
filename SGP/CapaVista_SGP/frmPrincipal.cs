@@ -368,20 +368,7 @@ namespace CapaVista_SGP
 
         private void reporteBitacoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (seguridad.PermisosAcceso("12", txtusuario.Text) == 1)
-            {
-                bit.user(txtusuario.Text);
-                bit.insert("Ingreso a Ver Reporte de Bitacora", 12);
-                frmReporteBitacora reportebita = new frmReporteBitacora();
-                reportebita.MdiParent = this;
-                reportebita.Show();
-            }
-            else
-            {
-                bit.user(txtusuario.Text);
-                bit.insert("Trato de Ver Reporte Bitacora", 12);
-                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
-            }
+           
         }
 
         private void reporteDeCitasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -416,6 +403,42 @@ namespace CapaVista_SGP
             {
                 bit.user(txtusuario.Text);
                 bit.insert("Trato de Ver Reporte de Pasaportes", 312);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("12", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso a Ver Reporte de Bitacora", 12);
+                frmReporteBitacora reportebita = new frmReporteBitacora();
+                reportebita.MdiParent = this;
+                reportebita.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ver Reporte Bitacora", 12);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void busquedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("12", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso a Ver Reporte de Bitacora", 12);
+                frmBitacoraFiltro reportebita = new frmBitacoraFiltro();
+                reportebita.MdiParent = this;
+                reportebita.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ver Reporte Bitacora", 12);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }

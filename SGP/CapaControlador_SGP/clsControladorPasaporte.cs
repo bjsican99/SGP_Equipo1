@@ -76,6 +76,15 @@ namespace CapaControlador_SGP
             string Consulta = "UPDATE  tbl_pasaporte SET fecha_emision = '"+glo.fecha_emisiong+"', fecha_vencimiento = '"+glo.fecha_expiraciong+"' where pk_id_pasaporte = " + glo.pk_cuig + ";";
             return Modelo.funcModificar(Consulta);
         }
-
+        public OdbcDataReader funcConsultaDetallesBitacora()
+        {
+            string Consulta = "SELECT * FROM bitacora ;";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcConsultaDetallesBitacoraFiltro(string Campo, string Dato)
+        {
+            string Consulta = "SELECT * FROM bitacora Where " + Campo + " = " + Dato + ";";
+            return Modelo.funcConsulta(Consulta);
+        }
     }
 }
