@@ -99,22 +99,29 @@ namespace CapaVista_SGP.Reportes
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            if (rbUser.Checked == true)
+            if (rbUser.Checked==false && rbIP.Checked==false && rbAplicacion.Checked==false)
+            {
+                MessageBox.Show("Seleccione el campo a filtar");
+            }
+            if (rbUser.Checked == true && txtUser.Text != "")
             {
                 campo = "fk_idusuario_bitacora";
                 dato = txtUser.Text;
+                CargarDetallesFiltro();
             }
-            if (rbIP.Checked == true)
+            if (rbIP.Checked == true && txtUser.Text != "")
             {
                 campo = "direccionhost_bitacora";
                 dato = "'" + txtIP.Text + "'";
+                CargarDetallesFiltro();
             }
-            if (rbAplicacion.Checked == true)
+            if (rbAplicacion.Checked == true && txtUser.Text != "")
             {
                 campo = "fk_idaplicacion_bitacora";
                 dato = txtAplicacion.Text;
+                CargarDetallesFiltro();
             }
-            CargarDetallesFiltro();
+          
         }
     }
 }

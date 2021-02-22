@@ -218,7 +218,10 @@ namespace CapaVista_SGP.Reportes
             this.Controls.Add(this.rbIP);
             this.Controls.Add(this.rbUser);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmBitacoraFiltro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBitacoraFiltro";
             this.Load += new System.EventHandler(this.frmBitacoraFiltro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBitacora)).EndInit();
