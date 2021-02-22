@@ -19,6 +19,7 @@ namespace CapaVista_SGP
         clsVistaBitacora bit = new clsVistaBitacora();//instancia para la bitacora.
         clsControladorPasaporte controlador = new clsControladorPasaporte();
         clsVariableGlobal glo = new clsVariableGlobal();
+        clsValidaciones validaciones = new clsValidaciones();
         public frmVerificacionDatos()
         {
             InitializeComponent();
@@ -157,6 +158,9 @@ namespace CapaVista_SGP
             if (cbDPI.Checked == true)
             {
                 btnBoleto.Enabled = true;
+            }else if(cbDPI.Checked == false)
+            {
+                btnBoleto.Enabled = false;
             }
         }
 
@@ -170,6 +174,16 @@ namespace CapaVista_SGP
             dgvCUI.Rows.Clear();
             cbDPI.Checked = false;
             cbDPI.Enabled = false;
+        }
+
+        private void txtCUI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CampoNumerico(e);
+        }
+
+        private void txtBoleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CampoNumerico(e);
         }
     }
 }

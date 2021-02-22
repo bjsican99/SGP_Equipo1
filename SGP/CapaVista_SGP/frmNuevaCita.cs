@@ -14,6 +14,7 @@ namespace CapaVista_SGP
 {
     public partial class frmNuevaCita : Form
     {
+        clsValidaciones validaciones = new clsValidaciones();
         public frmNuevaCita()
         {
             InitializeComponent();
@@ -25,15 +26,9 @@ namespace CapaVista_SGP
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+        private void label2_Click(object sender, EventArgs e){}
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void label1_Click(object sender, EventArgs e){}
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -101,14 +96,31 @@ namespace CapaVista_SGP
            
         }
 
-        private void txt_nombre_TextChanged(object sender, EventArgs e)
-        {
+        private void txt_nombre_TextChanged(object sender, EventArgs e){}
 
+        private void txtBoleta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CampoNumerico(e);
         }
 
-        private void txt_citaid_TextChanged(object sender, EventArgs e)
+        private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
+            validaciones.CamposLetrasTexto(e);
+        }
 
+        private void txt_apellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CamposLetrasTexto(e);
+        }
+
+        private void txt_telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CampoNumerico(e);
+        }
+
+        private void txt_dpi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CampoNumerico(e);
         }
     }
 }

@@ -219,6 +219,7 @@
             this.txtBoleto.Name = "txtBoleto";
             this.txtBoleto.Size = new System.Drawing.Size(159, 20);
             this.txtBoleto.TabIndex = 16;
+            this.txtBoleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoleto_KeyPress);
             // 
             // label2
             // 
@@ -330,6 +331,7 @@
             this.txtCUI.Name = "txtCUI";
             this.txtCUI.Size = new System.Drawing.Size(193, 20);
             this.txtCUI.TabIndex = 13;
+            this.txtCUI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCUI_KeyPress);
             // 
             // label7
             // 

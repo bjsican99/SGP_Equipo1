@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVerificar = new System.Windows.Forms.Button();
             this.rbtNuevo = new System.Windows.Forms.RadioButton();
             this.rbtRenovacion = new System.Windows.Forms.RadioButton();
             this.txtfechafinal = new System.Windows.Forms.TextBox();
@@ -68,7 +69,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnVerificar = new System.Windows.Forms.Button();
+            this.txtTipo1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -97,7 +98,6 @@
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(177, 20);
             this.txtURL.TabIndex = 17;
-            this.txtURL.Text = "URL";
             this.txtURL.Visible = false;
             // 
             // button2
@@ -141,6 +141,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(169)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.txtTipo1);
             this.panel1.Controls.Add(this.btnVerificar);
             this.panel1.Controls.Add(this.rbtNuevo);
             this.panel1.Controls.Add(this.rbtRenovacion);
@@ -178,6 +179,19 @@
             this.panel1.Size = new System.Drawing.Size(571, 573);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnVerificar
+            // 
+            this.btnVerificar.BackColor = System.Drawing.Color.White;
+            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificar.Location = new System.Drawing.Point(384, 480);
+            this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(88, 32);
+            this.btnVerificar.TabIndex = 53;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = false;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
             // rbtNuevo
             // 
@@ -242,6 +256,7 @@
             this.txtautoridad.Name = "txtautoridad";
             this.txtautoridad.Size = new System.Drawing.Size(155, 20);
             this.txtautoridad.TabIndex = 50;
+            this.txtautoridad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtautoridad_KeyPress);
             // 
             // label14
             // 
@@ -338,6 +353,7 @@
             this.txtlibreta.Size = new System.Drawing.Size(155, 20);
             this.txtlibreta.TabIndex = 51;
             this.txtlibreta.TextChanged += new System.EventHandler(this.txtlibreta_TextChanged);
+            this.txtlibreta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtlibreta_KeyPress);
             // 
             // label9
             // 
@@ -539,18 +555,14 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // btnVerificar
+            // txtTipo1
             // 
-            this.btnVerificar.BackColor = System.Drawing.Color.White;
-            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerificar.Location = new System.Drawing.Point(384, 480);
-            this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(88, 32);
-            this.btnVerificar.TabIndex = 53;
-            this.btnVerificar.Text = "Verificar";
-            this.btnVerificar.UseVisualStyleBackColor = false;
-            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
+            this.txtTipo1.Enabled = false;
+            this.txtTipo1.Location = new System.Drawing.Point(384, 107);
+            this.txtTipo1.Name = "txtTipo1";
+            this.txtTipo1.Size = new System.Drawing.Size(100, 20);
+            this.txtTipo1.TabIndex = 54;
+            this.txtTipo1.Visible = false;
             // 
             // frmPrimerpass
             // 
@@ -618,5 +630,6 @@
         private System.Windows.Forms.RadioButton rbtNuevo;
         private System.Windows.Forms.RadioButton rbtRenovacion;
         private System.Windows.Forms.Button btnVerificar;
+        private System.Windows.Forms.TextBox txtTipo1;
     }
 }

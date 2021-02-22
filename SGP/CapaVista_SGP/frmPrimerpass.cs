@@ -18,6 +18,7 @@ namespace CapaVista_SGP
         clsControladorPasaporte controlador = new clsControladorPasaporte();
         clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();//instancia para los permisos por aplicacion
         clsVistaBitacora bit = new clsVistaBitacora();//instancia para la bitacora.
+        clsValidaciones validaciones = new clsValidaciones();
         public frmPrimerpass()
         {
             InitializeComponent();
@@ -52,20 +53,13 @@ namespace CapaVista_SGP
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
         }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-        }
         private void guardarglobal()
         {         
-            glo.tipog = cmbtipo.Text;
+            glo.tipog = txtTipo1.Text;
             glo.autoridadg = txtautoridad.Text;
             glo.nolibretag = txtlibreta.Text;
             glo.urlg = txtURL.Text;
+
         }
         private void guardarpasaportedb()
         {
@@ -104,7 +98,6 @@ namespace CapaVista_SGP
         }
 
         
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -116,6 +109,11 @@ namespace CapaVista_SGP
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtTipo1.Text = "1";
+            if (cmbtipo.SelectedIndex != -1)
+            {
+                txtTipo1.Text = cmbtipo.SelectedValue.ToString();
+            }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -193,15 +191,39 @@ namespace CapaVista_SGP
         private void btnVerificar_Click(object sender, EventArgs e)
         {
             int a, b;
-            if (txtautoridad.Text != "" && txtlibreta.Text != "" && txtfechafinal.Text != "" && txtfechae.Text != "" && cmbtipo.SelectedItem != null)
+            if (txtautoridad.Text != "" && txtlibreta.Text != "" && txtfechafinal.Text != "" && txtfechae.Text != "" && cmbtipo.SelectedItem != null && txtURL.Text != "")
             {
                 a = 1;
             }
             else
             {
-                MessageBox.Show("Verificar Datos");
+                if(txtautoridad.Text == "")
+                {
+                    MessageBox.Show("Falta Por llenar Autoridad");
+                }
+                if(txtlibreta.Text == "")
+                {
+                    MessageBox.Show("Falta El numero de libreta");
+                }
+                if(txtfechafinal.Text == "")
+                {
+                    MessageBox.Show("Falta Fecha de Expiración");
+                }
+                if(txtfechae.Text == "")
+                {
+                    MessageBox.Show("Falta Fecha de Emisión");
+                }
+                if(cmbtipo.SelectedItem == null)
+                {
+                    MessageBox.Show("Falta Tipo de Pasaporte");
+                }
+                if(txtURL.Text == "")
+                {
+                    MessageBox.Show("Falta Cargar la Imagen");
+                }   
                 a = 0;
             }
+
             if (rbtNuevo.Checked == true || rbtRenovacion.Checked == true)
             {
                 b = 1;
@@ -218,6 +240,16 @@ namespace CapaVista_SGP
             else {
                 btnSiguiente.Enabled = false;
             }
+        }
+
+        private void txtautoridad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CamposLetras(e);
+        }
+
+        private void txtlibreta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CampoNumerico(e);
         }
     }
 }

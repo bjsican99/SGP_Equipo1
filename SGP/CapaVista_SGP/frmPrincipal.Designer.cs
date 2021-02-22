@@ -58,11 +58,14 @@ namespace CapaVista_SGP
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteBitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDePasaportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -297,6 +300,17 @@ namespace CapaVista_SGP
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.aboutToolStripMenuItem.Text = "&Acerca de... ...";
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteBitacoraToolStripMenuItem,
+            this.reporteDeCitasToolStripMenuItem,
+            this.reporteDePasaportesToolStripMenuItem});
+            this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
             // statusStrip
             // 
             this.statusStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
@@ -323,12 +337,26 @@ namespace CapaVista_SGP
             this.txtusuario.Size = new System.Drawing.Size(100, 20);
             this.txtusuario.TabIndex = 4;
             // 
-            // reportesToolStripMenuItem
+            // reporteBitacoraToolStripMenuItem
             // 
-            this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reporteBitacoraToolStripMenuItem.Name = "reporteBitacoraToolStripMenuItem";
+            this.reporteBitacoraToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.reporteBitacoraToolStripMenuItem.Text = "Reporte Bitacora";
+            this.reporteBitacoraToolStripMenuItem.Click += new System.EventHandler(this.reporteBitacoraToolStripMenuItem_Click);
+            // 
+            // reporteDeCitasToolStripMenuItem
+            // 
+            this.reporteDeCitasToolStripMenuItem.Name = "reporteDeCitasToolStripMenuItem";
+            this.reporteDeCitasToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.reporteDeCitasToolStripMenuItem.Text = "Reporte De Citas";
+            this.reporteDeCitasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeCitasToolStripMenuItem_Click);
+            // 
+            // reporteDePasaportesToolStripMenuItem
+            // 
+            this.reporteDePasaportesToolStripMenuItem.Name = "reporteDePasaportesToolStripMenuItem";
+            this.reporteDePasaportesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.reporteDePasaportesToolStripMenuItem.Text = "Reporte De Pasaportes";
+            this.reporteDePasaportesToolStripMenuItem.Click += new System.EventHandler(this.reporteDePasaportesToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -392,6 +420,9 @@ namespace CapaVista_SGP
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem motivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteBitacoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeCitasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDePasaportesToolStripMenuItem;
     }
 }
 
