@@ -109,13 +109,13 @@ namespace CapaVista_SGP.Reportes
                 dato = txtUser.Text;
                 CargarDetallesFiltro();
             }
-            if (rbIP.Checked == true && txtUser.Text != "")
+            if (rbIP.Checked == true && txtIP.Text != "")
             {
                 campo = "direccionhost_bitacora";
                 dato = "'" + txtIP.Text + "'";
                 CargarDetallesFiltro();
             }
-            if (rbAplicacion.Checked == true && txtUser.Text != "")
+            if (rbAplicacion.Checked == true && txtAplicacion.Text != "")
             {
                 campo = "fk_idaplicacion_bitacora";
                 dato = txtAplicacion.Text;
