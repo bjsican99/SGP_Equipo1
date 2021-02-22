@@ -304,13 +304,5 @@ namespace CapaControlador_SGP
             }
         }
 
-
-
-
-
-
-
-
-
     }
 }

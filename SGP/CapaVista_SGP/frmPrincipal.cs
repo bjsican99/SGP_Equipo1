@@ -1,5 +1,6 @@
 ﻿using CapaControlador_SGP;
 using CapaVista_SGP.Mantenimientos;
+using CapaVista_SGP.Reportes;
 using CapaVistaSeguridad;
 using CapaVistaSeguridad.Formularios;
 using CapaVistaSeguridad.Formularios.Mantenimientos;
@@ -361,6 +362,60 @@ namespace CapaVista_SGP
             {
                 bit.user(txtusuario.Text);
                 bit.insert("Trato de Ingresar a Mantenimiento Motivo de Gestion", 303);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void reporteBitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("12", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso a Ver Reporte de Bitacora", 12);
+                frmReporteBitacora reportebita = new frmReporteBitacora();
+                reportebita.MdiParent = this;
+                reportebita.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ver Reporte Bitacora", 12);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void reporteDeCitasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("311", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso a Ver Reporte de Citas", 311);
+                frmReporteCitas reportebita = new frmReporteCitas();
+                reportebita.MdiParent = this;
+                reportebita.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ver Reporte de Citas", 311);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void reporteDePasaportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("312", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso a Ver Reporte de Pasaportes", 312);
+                frmReportePasaporte reportebita = new frmReportePasaporte();
+                reportebita.MdiParent = this;
+                reportebita.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ver Reporte de Pasaportes", 312);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }

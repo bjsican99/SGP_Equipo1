@@ -17,6 +17,7 @@ namespace CapaVista_SGP
         string UsuarioAplicacion;
         clsVariableGlobal glo = new clsVariableGlobal();
         clsControladorPasaporte controlador = new clsControladorPasaporte();
+        clsValidaciones validaciones = new clsValidaciones();
         public frmModiCita()
         {
             InitializeComponent();
@@ -163,6 +164,26 @@ namespace CapaVista_SGP
             cmb_motivo.ValueMember = "pk_id_motivo";
             cmb_motivo.DataSource = controlador.funcObtenerCamposComboboxPas("pk_id_motivo", "motivo", "tbl_motivo", "estado");
             cmb_motivo.SelectedIndex = -1;
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CamposLetrasTexto(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CamposLetrasTexto(e);
+        }
+
+        private void txtNumeroBoleta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CampoNumerico(e);
+        }
+
+        private void txtCentro_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
