@@ -36,7 +36,7 @@ namespace CapaVista_SGP
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            boleto();
         }
         private void boleto()
         {

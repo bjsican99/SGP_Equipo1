@@ -28,3 +28,9 @@ C:\Users\jmora\Desktop\Git\Pasaporte 1.1\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debu
 C:\Users\jmora\Desktop\Git\Pasaporte 1.1\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.csproj.CoreCompileInputs.cache
 C:\Users\jmora\Desktop\Git\Pasaporte 1.1\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.dll
 C:\Users\jmora\Desktop\Git\Pasaporte 1.1\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.pdb
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaModelo_SGP\bin\Debug\CapaModelo_SGP.dll
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaModelo_SGP\bin\Debug\CapaModelo_SGP.pdb
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.csprojAssemblyReference.cache
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.csproj.CoreCompileInputs.cache
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.dll
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaModelo_SGP\obj\Debug\CapaModelo_SGP.pdb

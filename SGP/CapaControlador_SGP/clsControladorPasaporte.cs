@@ -86,5 +86,10 @@ namespace CapaControlador_SGP
             string Consulta = "SELECT * FROM bitacora Where " + Campo + " = " + Dato + ";";
             return Modelo.funcConsulta(Consulta);
         }
+        public OdbcDataReader funcConsultaDetallespasaporte(string Tabla, string CodPedido)
+        {
+            string Consulta = "SELECT estado FROM " + Tabla + " Where pk_id_pasaporte = " + CodPedido + ";";
+            return Modelo.funcConsulta(Consulta);
+        }
     }
 }
