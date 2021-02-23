@@ -28,6 +28,13 @@ namespace CapaControlador_SGP
         static string nolibreta;
         static string URL;
         static string usuario;
+        static string valPasaporte;
+
+        public string valPasaporteg
+        {
+            get { return valPasaporte; }
+            set { valPasaporte = value; }
+        }
 
         public string usuariog
         {

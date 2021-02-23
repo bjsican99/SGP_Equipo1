@@ -339,3 +339,4 @@ C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaVista_SGP\bin\Debug\
 C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaVista_SGP\bin\Debug\CapaModeloSeguridad.pdb
 C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaVista_SGP\bin\Debug\CapaModeloNavegador.pdb
 C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.csproj.CopyComplete
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaVista_SGP\obj\Debug\CapaVista_SGP.Reportes.frmBitacoraFiltro.resources

@@ -62,6 +62,14 @@ namespace CapaVista_SGP
             {
                 cbDPI.Enabled = true;
             }
+            if(lblPasaporte.Text == "")
+            {
+                glo.valPasaporteg = "No";
+            }
+            else if(lblPasaporte.Text != "")
+            {
+                glo.valPasaporteg = "Si";
+            }
         }
         private void vpasaporte()
         {

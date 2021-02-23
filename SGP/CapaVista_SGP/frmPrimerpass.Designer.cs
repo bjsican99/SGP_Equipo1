@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTipo1 = new System.Windows.Forms.TextBox();
             this.btnVerificar = new System.Windows.Forms.Button();
             this.rbtNuevo = new System.Windows.Forms.RadioButton();
             this.rbtRenovacion = new System.Windows.Forms.RadioButton();
@@ -69,7 +70,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.txtTipo1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -180,6 +180,15 @@
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtTipo1
+            // 
+            this.txtTipo1.Enabled = false;
+            this.txtTipo1.Location = new System.Drawing.Point(384, 107);
+            this.txtTipo1.Name = "txtTipo1";
+            this.txtTipo1.Size = new System.Drawing.Size(100, 20);
+            this.txtTipo1.TabIndex = 54;
+            this.txtTipo1.Visible = false;
+            // 
             // btnVerificar
             // 
             this.btnVerificar.BackColor = System.Drawing.Color.White;
@@ -196,6 +205,7 @@
             // rbtNuevo
             // 
             this.rbtNuevo.AutoSize = true;
+            this.rbtNuevo.Enabled = false;
             this.rbtNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtNuevo.ForeColor = System.Drawing.Color.Maroon;
             this.rbtNuevo.Location = new System.Drawing.Point(388, 56);
@@ -210,6 +220,7 @@
             // rbtRenovacion
             // 
             this.rbtRenovacion.AutoSize = true;
+            this.rbtRenovacion.Enabled = false;
             this.rbtRenovacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtRenovacion.ForeColor = System.Drawing.Color.Maroon;
             this.rbtRenovacion.Location = new System.Drawing.Point(388, 23);
@@ -304,6 +315,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(204, 427);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -325,6 +337,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(204, 387);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.MinDate = new System.DateTime(2021, 2, 21, 0, 0, 0, 0);
@@ -554,15 +567,6 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // txtTipo1
-            // 
-            this.txtTipo1.Enabled = false;
-            this.txtTipo1.Location = new System.Drawing.Point(384, 107);
-            this.txtTipo1.Name = "txtTipo1";
-            this.txtTipo1.Size = new System.Drawing.Size(100, 20);
-            this.txtTipo1.TabIndex = 54;
-            this.txtTipo1.Visible = false;
             // 
             // frmPrimerpass
             // 

@@ -24,6 +24,24 @@ namespace CapaVista_SGP
             InitializeComponent();
             cargar_dpi();
             CargarCombobox();
+            
+        }
+        public void accion()
+        {
+            if (glo.valPasaporteg == "No")
+            {
+                rbtNuevo.Enabled = true;
+                rbtNuevo.Checked = true;
+                rbtRenovacion.Enabled = false;
+                rbtRenovacion.Checked = false;
+            }
+            else
+            {
+                rbtNuevo.Enabled = false;
+                rbtNuevo.Checked = false;
+                rbtRenovacion.Enabled = true;
+                rbtRenovacion.Checked = true;
+            }
         }
 
         public void CargarCombobox()
@@ -190,6 +208,7 @@ namespace CapaVista_SGP
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
+            accion();
             int a, b;
             if (txtautoridad.Text != "" && txtlibreta.Text != "" && txtfechafinal.Text != "" && txtfechae.Text != "" && cmbtipo.SelectedItem != null && txtURL.Text != "")
             {
