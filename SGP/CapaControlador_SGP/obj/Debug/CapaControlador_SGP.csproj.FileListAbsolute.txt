@@ -55,3 +55,4 @@ C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\obj\
 C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.csproj.CopyComplete
 C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.dll
 C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.pdb
+D:\Documentos\Proyectos-Software\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\System.Drawing.Common.dll
