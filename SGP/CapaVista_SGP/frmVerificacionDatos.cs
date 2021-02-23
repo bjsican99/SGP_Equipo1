@@ -57,9 +57,38 @@ namespace CapaVista_SGP
             bit.user(glo.usuariog);
             bit.insert("Verifico CUI", 308);
             CargarDetalles();
+            vpasaporte();
             if (dgvCUI.Rows.Count > 1)
             {
                 cbDPI.Enabled = true;
+            }
+        }
+        private void vpasaporte()
+        {
+            if (txtCUI.Text != "")
+            {
+                txtVPas.Text = "";
+                lblPasaporte.Text = "";
+                OdbcDataReader mostrar = controlador.funcConsultaDetallespasaporte("tbl_pasaporte", txtCUI.Text);
+                try
+                {
+                    while (mostrar.Read())
+                    {
+                        txtVPas.Text = mostrar.GetString(0);
+                        if (txtVPas.Text == "1")
+                        {
+                            lblPasaporte.Text = "Pasaporte Existente";
+                        }
+                        if (txtVPas.Text == "0")
+                        {
+                            lblPasaporte.Text = "";
+                        }
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
             }
         }
 
@@ -174,6 +203,7 @@ namespace CapaVista_SGP
             dgvCUI.Rows.Clear();
             cbDPI.Checked = false;
             cbDPI.Enabled = false;
+            lblPasaporte.Text = "";
         }
 
         private void txtCUI_KeyPress(object sender, KeyPressEventArgs e)

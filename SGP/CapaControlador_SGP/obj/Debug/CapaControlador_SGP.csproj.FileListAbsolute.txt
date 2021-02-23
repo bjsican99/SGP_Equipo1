@@ -45,3 +45,13 @@ C:\Users\jmora\Desktop\Git\Pasaporte 1.1\SGP_Equipo1\SGP\CapaControlador_SGP\obj
 C:\Users\jmora\Desktop\Git\Pasaporte 1.1\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.pdb
 C:\Users\jmora\Desktop\Git\Pasaporte 1.1\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\System.Drawing.Common.dll
 C:\Users\Brian\Desktop\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\System.Drawing.Common.dll
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaControlador_SGP.dll
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaControlador_SGP.pdb
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaModelo_SGP.dll
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\System.Drawing.Common.dll
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\bin\Debug\CapaModelo_SGP.pdb
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.csprojAssemblyReference.cache
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.csproj.CoreCompileInputs.cache
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.csproj.CopyComplete
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.dll
+C:\Users\jmora\Desktop\Git\Pasaporte1.2\SGP_Equipo1\SGP\CapaControlador_SGP\obj\Debug\CapaControlador_SGP.pdb
