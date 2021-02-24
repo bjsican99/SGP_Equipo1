@@ -115,11 +115,13 @@ namespace CapaVista_SGP.Mantenimientos
             // 
             // txt_estado
             // 
+            this.txt_estado.Enabled = false;
             this.txt_estado.Location = new System.Drawing.Point(152, 262);
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Size = new System.Drawing.Size(142, 20);
             this.txt_estado.TabIndex = 7;
             this.txt_estado.Tag = "estado";
+            this.txt_estado.Visible = false;
             // 
             // contextMenuStrip1
             // 

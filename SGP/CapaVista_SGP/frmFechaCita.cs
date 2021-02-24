@@ -21,6 +21,7 @@ namespace CapaVista_SGP
             InitializeComponent();
             CargarCombobox();
             CargarCombobox2();
+            dateTimePicker1.MinDate = DateTime.Today;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -59,6 +60,10 @@ namespace CapaVista_SGP
             txt_centro.Text = "";
             txt_fecha.Text = "";
             txt_hora.Text = "";
+            cmb_centro.Enabled = true;
+            cmb_hora.Enabled = true;
+            cmb_motivo.Enabled = true;
+            dateTimePicker1.Enabled = true;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,7 +77,7 @@ namespace CapaVista_SGP
 
         private void txt_centro_TextChanged(object sender, EventArgs e)
         {
-            if ((txt_centro.Text != "") && (int.Parse(txt_centro.Text) > 4))
+            if ((txt_centro.Text != "") && (int.Parse(txt_centro.Text) > 15))
             {
                 OdbcDataReader reader = controlador.funcConsultaCombo("pk_id_centro", "tbl_centro", "estado", "nombre_centro", txt_centro.Text);
                 if (reader.Read())
@@ -115,7 +120,7 @@ namespace CapaVista_SGP
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if ((txt_motivo.Text != "") && (int.Parse(txt_motivo.Text) > 4))
+            if ((txt_motivo.Text != "") && (int.Parse(txt_motivo.Text) > 15 ))
             {
                 OdbcDataReader reader = controlador.funcConsultaCombo("pk_id_motivo", "tbl_motivo", "estado", "motivo", txt_motivo.Text);
                 if (reader.Read())
@@ -170,6 +175,11 @@ namespace CapaVista_SGP
                 txt_centro.Enabled = false;
                 txt_fecha.Enabled = false;
                 txt_hora.Enabled = false;
+                //---
+                cmb_centro.Enabled = false;
+                cmb_hora.Enabled = false;
+                cmb_motivo.Enabled = false;
+                dateTimePicker1.Enabled = false;
             }
             else
             {
@@ -180,6 +190,11 @@ namespace CapaVista_SGP
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "HTML/Ayudas.chm", "AyudaLugarFecha.html");
+        }
+
+        private void frmFechaCita_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
