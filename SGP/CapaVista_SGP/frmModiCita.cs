@@ -185,5 +185,10 @@ namespace CapaVista_SGP
         {
 
         }
+
+        private void cmb_hora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_hora.Text = cmb_hora.SelectedItem.ToString();
+        }
     }
 }

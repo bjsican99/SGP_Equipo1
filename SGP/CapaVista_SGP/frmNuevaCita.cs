@@ -32,7 +32,14 @@ namespace CapaVista_SGP
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            btnSiguiente.Enabled = false;
+            txtBoleta.Enabled = true;
+            txt_nombre.Text = "";
+            txt_apellido.Text = "";
+            txt_telefono.Text = "";
+            txt_dpi.Text = "";
+            txtBoleta.Text = "";
+            lblbbanco.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,7 +93,6 @@ namespace CapaVista_SGP
                 txt_apellido.Enabled = true;
                 txt_telefono.Enabled = true;
                 txt_dpi.Enabled = true;
-                btnSiguiente.Enabled = true;
                 lblbbanco.Text = "Boleta Valida";
                 txtBoleta.Enabled = false;
             }
@@ -121,6 +127,22 @@ namespace CapaVista_SGP
         private void txt_dpi_KeyPress(object sender, KeyPressEventArgs e)
         {
             validaciones.CampoNumerico(e);
+        }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            if(txtBoleta.Text != "" && txt_nombre.Text != "" && txt_apellido.Text != "" && txt_telefono.Text != "" && txt_dpi.Text != "")
+            {
+                btnSiguiente.Enabled = true;
+                txt_nombre.Enabled = false;
+                txt_apellido.Enabled = false;
+                txt_telefono.Enabled = false;
+                txt_dpi.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Verificar Campos");
+            }
         }
     }
 }

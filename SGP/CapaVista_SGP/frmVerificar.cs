@@ -40,15 +40,17 @@ namespace CapaVista_SGP
         }
         private void boleto()
         {
+            txtEstadoBoleto.Text = "0";
+            pnl_cita.BackColor = Color.Red;
             if (txt_cita.Text != "")
             {
-
-                OdbcDataReader mostrar = controlador.funcConsultaDetallesBoleto("tbl_cita", txt_cita.Text);
+                
+                OdbcDataReader mostrar = controlador.funcConsultaDetallesCita(txt_cita.Text);
                 try
                 {
                     while (mostrar.Read())
                     {
-                        txtEstadoBoleto.Text = mostrar.GetString(1);
+                        txtEstadoBoleto.Text = mostrar.GetString(0);
                         if (txtEstadoBoleto.Text == "1")
                         {
                             pnl_cita.BackColor = Color.Lime;
