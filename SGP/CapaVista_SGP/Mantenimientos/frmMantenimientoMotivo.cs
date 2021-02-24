@@ -19,6 +19,7 @@ namespace CapaVista_SGP.Mantenimientos
             rbtn_habilitado.Checked = true;
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
+            txt_estado.Text = "1";
         }
 
         private void navegador1_Load(object sender, EventArgs e)
@@ -78,18 +79,16 @@ namespace CapaVista_SGP.Mantenimientos
 
         private void rbtn_habilitado_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbtn_habilitado.Checked == true)
-            {
+            
                 txt_estado.Text = "1";
-            }
+            
         }
 
         private void rbtn_deshabilitado_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbtn_deshabilitado.Checked == true)
-            {
+           
                 txt_estado.Text = "0";
-            }
+            
         }
     }
 }

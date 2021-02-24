@@ -114,11 +114,13 @@ namespace CapaVista_SGP.Mantenimientos
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(163, 285);
+            this.txtEstado.Enabled = false;
+            this.txtEstado.Location = new System.Drawing.Point(55, 408);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(220, 20);
             this.txtEstado.TabIndex = 7;
             this.txtEstado.Tag = "estado";
+            this.txtEstado.Visible = false;
             // 
             // dgvCentro
             // 
@@ -134,25 +136,27 @@ namespace CapaVista_SGP.Mantenimientos
             // 
             this.rbtnHabilidado.AutoSize = true;
             this.rbtnHabilidado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnHabilidado.Location = new System.Drawing.Point(221, 320);
+            this.rbtnHabilidado.Location = new System.Drawing.Point(163, 294);
             this.rbtnHabilidado.Name = "rbtnHabilidado";
             this.rbtnHabilidado.Size = new System.Drawing.Size(99, 21);
             this.rbtnHabilidado.TabIndex = 10;
             this.rbtnHabilidado.TabStop = true;
             this.rbtnHabilidado.Text = "Habilitado";
             this.rbtnHabilidado.UseVisualStyleBackColor = true;
+            this.rbtnHabilidado.CheckedChanged += new System.EventHandler(this.rbtnHabilidado_CheckedChanged);
             // 
             // rbtnDeshabilidado
             // 
             this.rbtnDeshabilidado.AutoSize = true;
             this.rbtnDeshabilidado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDeshabilidado.Location = new System.Drawing.Point(221, 343);
+            this.rbtnDeshabilidado.Location = new System.Drawing.Point(163, 317);
             this.rbtnDeshabilidado.Name = "rbtnDeshabilidado";
             this.rbtnDeshabilidado.Size = new System.Drawing.Size(116, 21);
             this.rbtnDeshabilidado.TabIndex = 11;
             this.rbtnDeshabilidado.TabStop = true;
             this.rbtnDeshabilidado.Text = "Desabilitado";
             this.rbtnDeshabilidado.UseVisualStyleBackColor = true;
+            this.rbtnDeshabilidado.CheckedChanged += new System.EventHandler(this.rbtnDeshabilidado_CheckedChanged);
             // 
             // panel1
             // 

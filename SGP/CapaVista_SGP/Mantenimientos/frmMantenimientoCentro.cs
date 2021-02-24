@@ -20,6 +20,7 @@ namespace CapaVista_SGP.Mantenimientos
             rbtnHabilidado.Checked = true;
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
+            txtEstado.Text = "1";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,6 +78,16 @@ namespace CapaVista_SGP.Mantenimientos
         private void frmMantenimientoCentro_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void rbtnHabilidado_CheckedChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "1";
+        }
+
+        private void rbtnDeshabilidado_CheckedChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "0";
         }
     }
 }

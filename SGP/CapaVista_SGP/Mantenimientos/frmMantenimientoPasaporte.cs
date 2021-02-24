@@ -19,6 +19,7 @@ namespace CapaVista_SGP.Mantenimientos
             rbtn_habilitado.Checked = true;
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
+            txt_estado.Text = "1";
         }
 
         private void navegador1_Load(object sender, EventArgs e)
