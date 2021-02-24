@@ -29,11 +29,15 @@ namespace CapaVista_SGP
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            
+            
+            GuardarGlobal();
+            guardarcita(); 
             frmImprimir imprimir = new frmImprimir();
             imprimir.MdiParent = this.MdiParent;
 
-            GuardarGlobal();
-            guardarcita();
+            
+            
             imprimir.Show();
         }
         private void GuardarGlobal()
@@ -43,6 +47,7 @@ namespace CapaVista_SGP
             Global.fechag = txt_fecha.Text;
             Global.horag = txt_hora.Text;
             Global.motivog = txt_motivo.Text;
+           
         }
         private void guardarcita()
         {
@@ -52,7 +57,11 @@ namespace CapaVista_SGP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            btnSalir.Enabled = false;
+            txt_motivo.Text = "";
+            txt_centro.Text = "";
+            txt_fecha.Text = "";
+            txt_hora.Text = "";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,6 +157,27 @@ namespace CapaVista_SGP
         private void comboBox1_SelectedIndexChanged_3(object sender, EventArgs e)
         {
  
+        }
+
+        private void cmb_hora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_hora.Text = cmb_hora.SelectedItem.ToString();
+        }
+
+        private void btn_validar_Click(object sender, EventArgs e)
+        {
+            if(txt_motivo.Text != "" && txt_centro.Text != "" && txt_fecha.Text != "" && txt_hora.Text != "")
+            {
+                btnSalir.Enabled = true;
+                txt_motivo.Enabled = false;
+                txt_centro.Enabled = false;
+                txt_fecha.Enabled = false;
+                txt_hora.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Verificar Campos");
+            }
         }
     }
 }

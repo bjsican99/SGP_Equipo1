@@ -47,15 +47,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cmb_motivo = new System.Windows.Forms.ComboBox();
             this.txtMotivo = new System.Windows.Forms.TextBox();
-            this.txtHora = new System.Windows.Forms.TextBox();
+            this.txt_hora = new System.Windows.Forms.TextBox();
             this.txtFechaCita = new System.Windows.Forms.TextBox();
             this.txtCentro = new System.Windows.Forms.TextBox();
             this.txtNumeroBoleta = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtNumeroCita = new System.Windows.Forms.TextBox();
-            this.navegador1 = new CapaVistaNavegador.Navegador();
             this.txtEstado = new System.Windows.Forms.TextBox();
+            this.navegador1 = new CapaVistaNavegador.Navegador();
+            this.cmb_hora = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvg_generar_cita)).BeginInit();
             this.SuspendLayout();
@@ -242,35 +243,43 @@
             // 
             // txtMotivo
             // 
+            this.txtMotivo.Enabled = false;
             this.txtMotivo.Location = new System.Drawing.Point(381, 403);
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.Size = new System.Drawing.Size(146, 20);
             this.txtMotivo.TabIndex = 48;
             this.txtMotivo.Tag = "fk_id_motivo_cita";
+            this.txtMotivo.Visible = false;
             // 
-            // txtHora
+            // txt_hora
             // 
-            this.txtHora.Location = new System.Drawing.Point(197, 360);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(146, 20);
-            this.txtHora.TabIndex = 47;
-            this.txtHora.Tag = "hora_cita";
+            this.txt_hora.Enabled = false;
+            this.txt_hora.Location = new System.Drawing.Point(380, 357);
+            this.txt_hora.Name = "txt_hora";
+            this.txt_hora.Size = new System.Drawing.Size(146, 20);
+            this.txt_hora.TabIndex = 47;
+            this.txt_hora.Tag = "hora_cita";
+            this.txt_hora.Visible = false;
             // 
             // txtFechaCita
             // 
+            this.txtFechaCita.Enabled = false;
             this.txtFechaCita.Location = new System.Drawing.Point(381, 305);
             this.txtFechaCita.Name = "txtFechaCita";
             this.txtFechaCita.Size = new System.Drawing.Size(146, 20);
             this.txtFechaCita.TabIndex = 46;
             this.txtFechaCita.Tag = "fecha_cita";
+            this.txtFechaCita.Visible = false;
             // 
             // txtCentro
             // 
+            this.txtCentro.Enabled = false;
             this.txtCentro.Location = new System.Drawing.Point(381, 264);
             this.txtCentro.Name = "txtCentro";
             this.txtCentro.Size = new System.Drawing.Size(145, 20);
             this.txtCentro.TabIndex = 45;
             this.txtCentro.Tag = "fk_id_centro";
+            this.txtCentro.Visible = false;
             this.txtCentro.TextChanged += new System.EventHandler(this.txtCentro_TextChanged);
             // 
             // txtNumeroBoleta
@@ -308,21 +317,39 @@
             this.txtNumeroCita.TabIndex = 41;
             this.txtNumeroCita.Tag = "pk_cita";
             // 
-            // navegador1
-            // 
-            this.navegador1.BackColor = System.Drawing.Color.Transparent;
-            this.navegador1.Location = new System.Drawing.Point(42, 47);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1059, 88);
-            this.navegador1.TabIndex = 50;
-            // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(67, 510);
+            this.txtEstado.Enabled = false;
+            this.txtEstado.Location = new System.Drawing.Point(450, 446);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(100, 20);
             this.txtEstado.TabIndex = 51;
-            this.txtEstado.Tag = "estado";
+            this.txtEstado.Tag = "estado_cita";
+            this.txtEstado.Visible = false;
+            // 
+            // navegador1
+            // 
+            this.navegador1.BackColor = System.Drawing.Color.Transparent;
+            this.navegador1.Location = new System.Drawing.Point(24, 33);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(1059, 105);
+            this.navegador1.TabIndex = 52;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            // 
+            // cmb_hora
+            // 
+            this.cmb_hora.FormattingEnabled = true;
+            this.cmb_hora.Items.AddRange(new object[] {
+            "8:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00"});
+            this.cmb_hora.Location = new System.Drawing.Point(197, 356);
+            this.cmb_hora.Name = "cmb_hora";
+            this.cmb_hora.Size = new System.Drawing.Size(146, 21);
+            this.cmb_hora.TabIndex = 53;
+            this.cmb_hora.SelectedIndexChanged += new System.EventHandler(this.cmb_hora_SelectedIndexChanged);
             // 
             // frmModiCita
             // 
@@ -332,11 +359,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1158, 601);
-            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.cmb_hora);
             this.Controls.Add(this.navegador1);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtMotivo);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txtHora);
+            this.Controls.Add(this.txt_hora);
             this.Controls.Add(this.dvg_generar_cita);
             this.Controls.Add(this.txtFechaCita);
             this.Controls.Add(this.label2);
@@ -392,14 +420,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmb_motivo;
         private System.Windows.Forms.TextBox txtMotivo;
-        private System.Windows.Forms.TextBox txtHora;
+        private System.Windows.Forms.TextBox txt_hora;
         private System.Windows.Forms.TextBox txtFechaCita;
         private System.Windows.Forms.TextBox txtCentro;
         private System.Windows.Forms.TextBox txtNumeroBoleta;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtNumeroCita;
-        private CapaVistaNavegador.Navegador navegador1;
         private System.Windows.Forms.TextBox txtEstado;
+        private CapaVistaNavegador.Navegador navegador1;
+        private System.Windows.Forms.ComboBox cmb_hora;
     }
 }

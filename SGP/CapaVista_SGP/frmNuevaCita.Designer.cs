@@ -47,6 +47,7 @@
             this.btnVerificar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_aceptar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,6 +82,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(169)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btn_aceptar);
             this.panel1.Controls.Add(this.lblbbanco);
             this.panel1.Controls.Add(this.txtEstadoBanco);
             this.panel1.Controls.Add(this.txt_dpi);
@@ -231,6 +233,7 @@
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.White;
+            this.btnSiguiente.Enabled = false;
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.Location = new System.Drawing.Point(397, 293);
             this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
@@ -263,7 +266,7 @@
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(88, 32);
             this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.Text = "Limpiar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
@@ -277,6 +280,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(534, 379);
             this.panel3.TabIndex = 13;
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.BackColor = System.Drawing.Color.White;
+            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aceptar.Location = new System.Drawing.Point(397, 235);
+            this.btn_aceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(88, 32);
+            this.btn_aceptar.TabIndex = 15;
+            this.btn_aceptar.Text = "Aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = false;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // frmNuevaCita
             // 
@@ -319,5 +335,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtEstadoBanco;
         private System.Windows.Forms.Label lblbbanco;
+        private System.Windows.Forms.Button btn_aceptar;
     }
 }

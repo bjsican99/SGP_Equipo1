@@ -91,5 +91,17 @@ namespace CapaControlador_SGP
             string Consulta = "SELECT estado FROM " + Tabla + " Where pk_id_pasaporte = " + CodPedido + ";";
             return Modelo.funcConsulta(Consulta);
         }
+
+        public OdbcDataReader funcConsultaDetallesCita(string CodPedido)
+        {
+            string Consulta = "SELECT estado_cita FROM tbl_cita Where pk_cita = " + CodPedido + ";";
+            return Modelo.funcConsulta(Consulta);
+        }
+
+        public OdbcDataReader funcConsultaDetallesCitaImprimir()
+        {
+            string Consulta = "SELECT pk_cita FROM tbl_cita Where nombre_solicitante =  '"+ glo2.nombreg +"' and apellido_solicitante = '"+ glo2.apellidog +"' and fk_numero_boleta = "+ glo2.boletag +" and fk_id_centro = "+ glo2.centrog +" and fecha_cita = '"+ glo2.fechag +"' and hora_cita = '"+ glo2.horag +"' and estado_cita = 1  ;"  ;
+            return Modelo.funcConsulta(Consulta);
+        }
     }
 }

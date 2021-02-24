@@ -30,26 +30,26 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_motivo = new System.Windows.Forms.TextBox();
-            this.cmb_motivo = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cmb_hora = new System.Windows.Forms.ComboBox();
             this.txt_hora = new System.Windows.Forms.TextBox();
             this.txt_fecha = new System.Windows.Forms.TextBox();
+            this.txt_motivo = new System.Windows.Forms.TextBox();
             this.txt_centro = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmb_motivo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_centro = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_limpiar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_validar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,50 +59,100 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Location = new System.Drawing.Point(28, 61);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(721, 341);
+            this.panel3.Size = new System.Drawing.Size(444, 341);
             this.panel3.TabIndex = 13;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(169)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.txt_motivo);
-            this.panel1.Controls.Add(this.cmb_motivo);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.btn_validar);
+            this.panel1.Controls.Add(this.cmb_hora);
             this.panel1.Controls.Add(this.txt_hora);
             this.panel1.Controls.Add(this.txt_fecha);
+            this.panel1.Controls.Add(this.txt_motivo);
             this.panel1.Controls.Add(this.txt_centro);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.cmb_motivo);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cmb_centro);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_limpiar);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Location = new System.Drawing.Point(16, 17);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 294);
+            this.panel1.Size = new System.Drawing.Size(398, 294);
             this.panel1.TabIndex = 7;
+            // 
+            // cmb_hora
+            // 
+            this.cmb_hora.FormattingEnabled = true;
+            this.cmb_hora.Items.AddRange(new object[] {
+            "8:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00"});
+            this.cmb_hora.Location = new System.Drawing.Point(127, 191);
+            this.cmb_hora.Name = "cmb_hora";
+            this.cmb_hora.Size = new System.Drawing.Size(121, 21);
+            this.cmb_hora.TabIndex = 26;
+            this.cmb_hora.SelectedIndexChanged += new System.EventHandler(this.cmb_hora_SelectedIndexChanged);
+            // 
+            // txt_hora
+            // 
+            this.txt_hora.Enabled = false;
+            this.txt_hora.Location = new System.Drawing.Point(268, 191);
+            this.txt_hora.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_hora.Name = "txt_hora";
+            this.txt_hora.Size = new System.Drawing.Size(76, 20);
+            this.txt_hora.TabIndex = 22;
+            this.txt_hora.Visible = false;
+            this.txt_hora.TextChanged += new System.EventHandler(this.txt_hora_TextChanged);
+            // 
+            // txt_fecha
+            // 
+            this.txt_fecha.Enabled = false;
+            this.txt_fecha.Location = new System.Drawing.Point(268, 149);
+            this.txt_fecha.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(76, 20);
+            this.txt_fecha.TabIndex = 21;
+            this.txt_fecha.Visible = false;
+            this.txt_fecha.TextChanged += new System.EventHandler(this.txt_fecha_TextChanged);
             // 
             // txt_motivo
             // 
             this.txt_motivo.Enabled = false;
-            this.txt_motivo.Location = new System.Drawing.Point(127, 80);
-            this.txt_motivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_motivo.Location = new System.Drawing.Point(268, 76);
+            this.txt_motivo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_motivo.Name = "txt_motivo";
             this.txt_motivo.Size = new System.Drawing.Size(76, 20);
             this.txt_motivo.TabIndex = 25;
+            this.txt_motivo.Visible = false;
             this.txt_motivo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // txt_centro
+            // 
+            this.txt_centro.Enabled = false;
+            this.txt_centro.Location = new System.Drawing.Point(268, 113);
+            this.txt_centro.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_centro.Name = "txt_centro";
+            this.txt_centro.Size = new System.Drawing.Size(76, 20);
+            this.txt_centro.TabIndex = 20;
+            this.txt_centro.Visible = false;
+            this.txt_centro.TextChanged += new System.EventHandler(this.txt_centro_TextChanged);
             // 
             // cmb_motivo
             // 
             this.cmb_motivo.FormattingEnabled = true;
-            this.cmb_motivo.Location = new System.Drawing.Point(223, 76);
+            this.cmb_motivo.Location = new System.Drawing.Point(127, 76);
             this.cmb_motivo.Name = "cmb_motivo";
             this.cmb_motivo.Size = new System.Drawing.Size(121, 21);
             this.cmb_motivo.TabIndex = 24;
@@ -117,44 +167,6 @@
             this.label5.Size = new System.Drawing.Size(55, 17);
             this.label5.TabIndex = 23;
             this.label5.Text = "Motivo";
-            // 
-            // txt_hora
-            // 
-            this.txt_hora.Location = new System.Drawing.Point(127, 193);
-            this.txt_hora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_hora.Name = "txt_hora";
-            this.txt_hora.Size = new System.Drawing.Size(76, 20);
-            this.txt_hora.TabIndex = 22;
-            this.txt_hora.TextChanged += new System.EventHandler(this.txt_hora_TextChanged);
-            // 
-            // txt_fecha
-            // 
-            this.txt_fecha.Enabled = false;
-            this.txt_fecha.Location = new System.Drawing.Point(127, 150);
-            this.txt_fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(76, 20);
-            this.txt_fecha.TabIndex = 21;
-            this.txt_fecha.TextChanged += new System.EventHandler(this.txt_fecha_TextChanged);
-            // 
-            // txt_centro
-            // 
-            this.txt_centro.Enabled = false;
-            this.txt_centro.Location = new System.Drawing.Point(127, 114);
-            this.txt_centro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_centro.Name = "txt_centro";
-            this.txt_centro.Size = new System.Drawing.Size(76, 20);
-            this.txt_centro.TabIndex = 20;
-            this.txt_centro.TextChanged += new System.EventHandler(this.txt_centro_TextChanged);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(367, 24);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(286, 241);
-            this.dataGridView1.TabIndex = 18;
             // 
             // label4
             // 
@@ -189,24 +201,24 @@
             // cmb_centro
             // 
             this.cmb_centro.FormattingEnabled = true;
-            this.cmb_centro.Location = new System.Drawing.Point(223, 114);
+            this.cmb_centro.Location = new System.Drawing.Point(127, 113);
             this.cmb_centro.Name = "cmb_centro";
             this.cmb_centro.Size = new System.Drawing.Size(121, 21);
             this.cmb_centro.TabIndex = 13;
             this.cmb_centro.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button1
+            // btn_limpiar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(49, 225);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 40);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_limpiar.BackColor = System.Drawing.Color.White;
+            this.btn_limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_limpiar.Location = new System.Drawing.Point(28, 225);
+            this.btn_limpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_limpiar.Name = "btn_limpiar";
+            this.btn_limpiar.Size = new System.Drawing.Size(116, 40);
+            this.btn_limpiar.TabIndex = 12;
+            this.btn_limpiar.Text = "Limpiar";
+            this.btn_limpiar.UseVisualStyleBackColor = false;
+            this.btn_limpiar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -222,8 +234,8 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(223, 150);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(127, 149);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.MinDate = new System.DateTime(2021, 2, 3, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
@@ -233,9 +245,10 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.White;
+            this.btnSalir.Enabled = false;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(192, 225);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Location = new System.Drawing.Point(268, 225);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(109, 40);
             this.btnSalir.TabIndex = 1;
@@ -250,9 +263,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(775, 45);
+            this.panel2.Size = new System.Drawing.Size(504, 45);
             this.panel2.TabIndex = 12;
             // 
             // label1
@@ -268,22 +281,34 @@
             this.label1.Text = "Fecha y lugar";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btn_validar
+            // 
+            this.btn_validar.BackColor = System.Drawing.Color.White;
+            this.btn_validar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_validar.Location = new System.Drawing.Point(148, 225);
+            this.btn_validar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_validar.Name = "btn_validar";
+            this.btn_validar.Size = new System.Drawing.Size(116, 40);
+            this.btn_validar.TabIndex = 27;
+            this.btn_validar.Text = "Validar";
+            this.btn_validar.UseVisualStyleBackColor = false;
+            this.btn_validar.Click += new System.EventHandler(this.btn_validar_Click);
+            // 
             // frmFechaCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(175)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(775, 410);
+            this.ClientSize = new System.Drawing.Size(504, 410);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmFechaCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFechaCita";
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -298,10 +323,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmb_centro;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -311,5 +335,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_motivo;
         private System.Windows.Forms.ComboBox cmb_motivo;
+        private System.Windows.Forms.ComboBox cmb_hora;
+        private System.Windows.Forms.Button btn_validar;
     }
 }
