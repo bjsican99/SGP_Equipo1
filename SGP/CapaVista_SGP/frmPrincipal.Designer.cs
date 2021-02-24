@@ -347,7 +347,7 @@ namespace CapaVista_SGP
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrincipal";
+            this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip.ResumeLayout(false);

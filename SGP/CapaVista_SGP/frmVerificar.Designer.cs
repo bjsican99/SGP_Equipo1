@@ -38,8 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAyuda = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -51,7 +51,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Location = new System.Drawing.Point(34, 63);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(534, 302);
             this.panel3.TabIndex = 13;
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(16, 17);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 265);
             this.panel1.TabIndex = 7;
@@ -85,7 +85,7 @@
             // 
             this.pnl_cita.BackColor = System.Drawing.Color.Red;
             this.pnl_cita.Location = new System.Drawing.Point(311, 166);
-            this.pnl_cita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_cita.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_cita.Name = "pnl_cita";
             this.pnl_cita.Size = new System.Drawing.Size(68, 42);
             this.pnl_cita.TabIndex = 8;
@@ -95,7 +95,7 @@
             this.btnSalir.BackColor = System.Drawing.Color.White;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(282, 91);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(128, 32);
             this.btnSalir.TabIndex = 7;
@@ -106,7 +106,7 @@
             // txt_cita
             // 
             this.txt_cita.Location = new System.Drawing.Point(238, 42);
-            this.txt_cita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_cita.Margin = new System.Windows.Forms.Padding(2);
             this.txt_cita.Name = "txt_cita";
             this.txt_cita.Size = new System.Drawing.Size(222, 20);
             this.txt_cita.TabIndex = 6;
@@ -144,10 +144,21 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(600, 45);
             this.panel2.TabIndex = 12;
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(546, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(40, 41);
+            this.btnAyuda.TabIndex = 21;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // label1
             // 
@@ -162,17 +173,6 @@
             this.label1.Text = "Verificar";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnAyuda
-            // 
-            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
-            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
-            this.btnAyuda.Location = new System.Drawing.Point(546, 2);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(40, 41);
-            this.btnAyuda.TabIndex = 21;
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
-            // 
             // frmVerificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,10 +181,10 @@
             this.ClientSize = new System.Drawing.Size(600, 380);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmVerificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmVerificar";
+            this.Text = "Verificar Cita";
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -69,9 +69,9 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnAyuda = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -552,6 +552,17 @@
             this.panel2.Size = new System.Drawing.Size(879, 45);
             this.panel2.TabIndex = 14;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(825, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(40, 41);
+            this.btnAyuda.TabIndex = 20;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -571,17 +582,6 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // btnAyuda
-            // 
-            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
-            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
-            this.btnAyuda.Location = new System.Drawing.Point(825, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(40, 41);
-            this.btnAyuda.TabIndex = 20;
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
-            // 
             // frmPrimerpass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,7 +595,7 @@
             this.MinimizeBox = false;
             this.Name = "frmPrimerpass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrimerpass";
+            this.Text = "Pasaporte";
             this.Load += new System.EventHandler(this.frmPrimerpass_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

@@ -61,8 +61,8 @@
             this.txtCUI = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAyuda = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCUI)).BeginInit();
@@ -384,6 +384,17 @@
             this.panel2.Size = new System.Drawing.Size(799, 45);
             this.panel2.TabIndex = 14;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(745, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(40, 41);
+            this.btnAyuda.TabIndex = 20;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -395,17 +406,6 @@
             this.label1.Size = new System.Drawing.Size(138, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Pasaporte";
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
-            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
-            this.btnAyuda.Location = new System.Drawing.Point(745, 2);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(40, 41);
-            this.btnAyuda.TabIndex = 20;
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // frmVerificacionDatos
             // 
@@ -420,7 +420,7 @@
             this.MinimizeBox = false;
             this.Name = "frmVerificacionDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmVerificacionDatos";
+            this.Text = "Verificacion de Datos";
             this.Load += new System.EventHandler(this.frmVerificacionDatos_Load);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
