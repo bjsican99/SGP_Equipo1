@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerificacionDatos));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtVPas = new System.Windows.Forms.TextBox();
+            this.lblPasaporte = new System.Windows.Forms.Label();
             this.btnEliminarDPI = new System.Windows.Forms.Button();
             this.cbDPI = new System.Windows.Forms.CheckBox();
             this.txtEstadoBoleto = new System.Windows.Forms.TextBox();
@@ -59,8 +62,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtVPas = new System.Windows.Forms.TextBox();
-            this.lblPasaporte = new System.Windows.Forms.Label();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCUI)).BeginInit();
@@ -104,6 +106,26 @@
             this.panel1.Size = new System.Drawing.Size(704, 496);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtVPas
+            // 
+            this.txtVPas.Enabled = false;
+            this.txtVPas.Location = new System.Drawing.Point(663, 331);
+            this.txtVPas.Name = "txtVPas";
+            this.txtVPas.Size = new System.Drawing.Size(16, 20);
+            this.txtVPas.TabIndex = 28;
+            this.txtVPas.Visible = false;
+            // 
+            // lblPasaporte
+            // 
+            this.lblPasaporte.AutoSize = true;
+            this.lblPasaporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasaporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
+            this.lblPasaporte.Location = new System.Drawing.Point(213, 319);
+            this.lblPasaporte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPasaporte.Name = "lblPasaporte";
+            this.lblPasaporte.Size = new System.Drawing.Size(0, 31);
+            this.lblPasaporte.TabIndex = 27;
             // 
             // btnEliminarDPI
             // 
@@ -353,6 +375,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.btnAyuda);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -373,25 +396,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Pasaporte";
             // 
-            // txtVPas
+            // btnAyuda
             // 
-            this.txtVPas.Enabled = false;
-            this.txtVPas.Location = new System.Drawing.Point(663, 331);
-            this.txtVPas.Name = "txtVPas";
-            this.txtVPas.Size = new System.Drawing.Size(16, 20);
-            this.txtVPas.TabIndex = 28;
-            this.txtVPas.Visible = false;
-            // 
-            // lblPasaporte
-            // 
-            this.lblPasaporte.AutoSize = true;
-            this.lblPasaporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasaporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
-            this.lblPasaporte.Location = new System.Drawing.Point(213, 319);
-            this.lblPasaporte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPasaporte.Name = "lblPasaporte";
-            this.lblPasaporte.Size = new System.Drawing.Size(0, 31);
-            this.lblPasaporte.TabIndex = 27;
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(745, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(40, 41);
+            this.btnAyuda.TabIndex = 20;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // frmVerificacionDatos
             // 
@@ -453,5 +467,6 @@
         private System.Windows.Forms.Button btnEliminarDPI;
         private System.Windows.Forms.TextBox txtVPas;
         private System.Windows.Forms.Label lblPasaporte;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

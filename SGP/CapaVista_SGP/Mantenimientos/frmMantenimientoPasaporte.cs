@@ -70,8 +70,8 @@ namespace CapaVista_SGP.Mantenimientos
             navegador1.DatosActualizar = dgv_tipo_pasaporte;
             navegador1.procActualizarData();
             navegador1.procCargar();
-            navegador1.ayudaRuta = "AYUDAS/AyudasMRP.chm";
-            navegador1.ruta = "AyudaActivos.html";
+            navegador1.ayudaRuta = "HTML/Ayudas.chm";
+            navegador1.ruta = "AyudaTipoPasaporte.html";
             rbtn_habilitado.Checked = true;
             rbtn_deshabilitado.Checked = false;
         }

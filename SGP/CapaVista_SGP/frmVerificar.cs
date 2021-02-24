@@ -72,5 +72,10 @@ namespace CapaVista_SGP
                 }
             }
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "HTML/Ayudas.chm", "AyudaVerificar.html");
+        }
     }
 }
