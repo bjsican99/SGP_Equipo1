@@ -24,6 +24,9 @@ namespace CapaVista_SGP
             InitializeComponent();
             cargar_dpi();
             CargarCombobox();
+            dateTimePicker1.MinDate = DateTime.Today;
+            dateTimePicker2.MinDate = DateTime.Today;
+
             
         }
         public void accion()
