@@ -138,7 +138,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCita";
+            this.Text = "Citas";
             this.Load += new System.EventHandler(this.frmCita_Load);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

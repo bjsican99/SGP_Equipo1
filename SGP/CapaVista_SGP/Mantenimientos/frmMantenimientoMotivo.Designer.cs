@@ -52,7 +52,7 @@ namespace CapaVista_SGP.Mantenimientos
             // 
             this.navegador1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
             this.navegador1.Location = new System.Drawing.Point(28, 76);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1069, 93);
             this.navegador1.TabIndex = 0;
@@ -159,7 +159,7 @@ namespace CapaVista_SGP.Mantenimientos
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1130, 51);
             this.panel1.TabIndex = 14;
@@ -198,7 +198,7 @@ namespace CapaVista_SGP.Mantenimientos
             this.DoubleBuffered = true;
             this.Name = "frmMantenimientoMotivo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMantenimientoMotivo";
+            this.Text = "Mantenimiento Motivo";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_motivo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

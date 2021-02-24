@@ -390,7 +390,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmModiCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Fecha y hora";
+            this.Text = "Modificar Cita ";
             this.Load += new System.EventHandler(this.frmModiCita_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

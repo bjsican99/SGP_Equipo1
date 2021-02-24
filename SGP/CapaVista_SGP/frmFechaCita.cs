@@ -29,15 +29,12 @@ namespace CapaVista_SGP
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            
-            
+
             GuardarGlobal();
             guardarcita(); 
             frmImprimir imprimir = new frmImprimir();
             imprimir.MdiParent = this.MdiParent;
 
-            
-            
             imprimir.Show();
         }
         private void GuardarGlobal()
