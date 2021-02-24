@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFechaCita));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_validar = new System.Windows.Forms.Button();
             this.cmb_hora = new System.Windows.Forms.ComboBox();
             this.txt_hora = new System.Windows.Forms.TextBox();
             this.txt_fecha = new System.Windows.Forms.TextBox();
@@ -47,7 +49,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_validar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,6 +91,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(398, 294);
             this.panel1.TabIndex = 7;
+            // 
+            // btn_validar
+            // 
+            this.btn_validar.BackColor = System.Drawing.Color.White;
+            this.btn_validar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_validar.Location = new System.Drawing.Point(148, 225);
+            this.btn_validar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_validar.Name = "btn_validar";
+            this.btn_validar.Size = new System.Drawing.Size(116, 40);
+            this.btn_validar.TabIndex = 27;
+            this.btn_validar.Text = "Validar";
+            this.btn_validar.UseVisualStyleBackColor = false;
+            this.btn_validar.Click += new System.EventHandler(this.btn_validar_Click);
             // 
             // cmb_hora
             // 
@@ -260,6 +275,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.btnAyuda);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -281,18 +297,16 @@
             this.label1.Text = "Fecha y lugar";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btn_validar
+            // btnAyuda
             // 
-            this.btn_validar.BackColor = System.Drawing.Color.White;
-            this.btn_validar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_validar.Location = new System.Drawing.Point(148, 225);
-            this.btn_validar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_validar.Name = "btn_validar";
-            this.btn_validar.Size = new System.Drawing.Size(116, 40);
-            this.btn_validar.TabIndex = 27;
-            this.btn_validar.Text = "Validar";
-            this.btn_validar.UseVisualStyleBackColor = false;
-            this.btn_validar.Click += new System.EventHandler(this.btn_validar_Click);
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(450, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(40, 41);
+            this.btnAyuda.TabIndex = 19;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // frmFechaCita
             // 
@@ -303,6 +317,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmFechaCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFechaCita";
@@ -337,5 +353,6 @@
         private System.Windows.Forms.ComboBox cmb_motivo;
         private System.Windows.Forms.ComboBox cmb_hora;
         private System.Windows.Forms.Button btn_validar;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

@@ -223,5 +223,10 @@ namespace CapaVista_SGP
         {
             validaciones.CampoNumerico(e);
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "HTML/Ayudas.chm", "Ayuda_Verificacion_Datos.html");
+        }
     }
 }

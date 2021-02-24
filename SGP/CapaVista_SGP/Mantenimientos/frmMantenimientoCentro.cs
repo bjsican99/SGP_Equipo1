@@ -68,8 +68,8 @@ namespace CapaVista_SGP.Mantenimientos
             navegador1.DatosActualizar = dgvCentro;
             navegador1.procActualizarData();
             navegador1.procCargar();
-            navegador1.ayudaRuta = "AYUDAS/AyudasMRP.chm";
-            navegador1.ruta = "AyudaActivos.html";
+            navegador1.ayudaRuta = "HTML/Ayudas.chm";
+            navegador1.ruta = "Ayuda_Mantenimiento_Centros.html";
             rbtnDeshabilidado.Checked = true;
             rbtnDeshabilidado.Checked = false;
         }
